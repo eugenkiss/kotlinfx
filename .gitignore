@@ -1,0 +1,24 @@
+# Project specific
+kotlinfx.iml
+
+# OS / App generated files
+build/
+.gradle/
+*build/artifacts
+.idea/artifacts
+bin/
+obj/
+out/
+.idea/
+lib/kotlin-runtime.jar
+*/target/*
+
+### Java specific
+*.class
+target
+classes/
+
+# Package Files #
+*.jar
+*.war
+*.ear

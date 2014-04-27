@@ -1,0 +1,65 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'http://oss.sonatype.org/content/repositories/snapshots'
+        }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+group = 'com.eugenkiss'
+version = '0.1-SNAPSHOT'
+
+apply plugin: "kotlin"
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+}
+
+subprojects {
+    buildscript {
+        repositories {
+            mavenCentral()
+            maven {
+                url 'http://oss.sonatype.org/content/repositories/snapshots'
+            }
+        }
+        dependencies {
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        }
+    }
+
+    apply plugin: 'kotlin'
+
+    repositories {
+        mavenCentral()
+        maven {
+            url 'http://oss.sonatype.org/content/repositories/snapshots'
+        }
+    }
+    dependencies {
+        compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+//        compile "org.jetbrains.kotlin:kotlin-runtime:$kotlinVersion"
+    }
+}
+
+//repositories {
+//    maven {
+//        url 'http://oss.sonatype.org/content/repositories/snapshots'
+//    }
+//}
+//dependencies {
+//    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+//}
+//sourceSets {
+//    main.java.srcDirs += 'src/main/kotlin'
+//}
+
+

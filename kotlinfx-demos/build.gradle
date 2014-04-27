@@ -1,0 +1,9 @@
+description = 'KotlinFX Demos'
+
+dependencies {
+    compile project(':kotlinfx-core')
+}
+
+apply plugin:'application'
+
+mainClassName = "demos.main.MainPackage"

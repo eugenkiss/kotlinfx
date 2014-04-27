@@ -1,0 +1,4 @@
+rootProject.name = 'kotlinfx'
+
+include 'kotlinfx-core', 'kotlinfx-demos'
+
