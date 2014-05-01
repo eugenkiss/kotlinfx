@@ -7,4 +7,4 @@ KotlinFX is a layer on top of [JavaFX 8][1] in the same vein as [ScalaFX](2) and
   [2]: https://code.google.com/p/scalafx/
   [3]: http://groovyfx.org/
 
-For more information see the [wiki](https://github.com/eugenkiss/kotlinfx/wiki/).
+For more information see the [KotlinFX Wiki](https://github.com/eugenkiss/kotlinfx/wiki/).
