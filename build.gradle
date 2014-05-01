@@ -10,7 +10,7 @@ buildscript {
     }
 }
 
-group = 'com.eugenkiss'
+group = 'kotlinfx'
 version = '0.1-SNAPSHOT'
 
 apply plugin: "kotlin"
@@ -46,20 +46,69 @@ subprojects {
     }
     dependencies {
         compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-//        compile "org.jetbrains.kotlin:kotlin-runtime:$kotlinVersion"
     }
 }
 
-//repositories {
-//    maven {
-//        url 'http://oss.sonatype.org/content/repositories/snapshots'
-//    }
+
+// Distribution
+
+// More information about the following code can be found in the wiki.
+// TODO: I bet this could be simplified so much...
+
+task distJar(type: Jar) {
+    archiveName = "kotlinfx-${rootProject.version}.jar"
+    from project(':kotlinfx-core').sourceSets.main.output.classesDir
+}
+
+// It is assumed that the KotlinFX-pages dir that is a clone of the gh-pages branch
+// is a sibling of the KotlinFX project dir.
+def ghpagesPath = "${projectDir.getParentFile()}/KotlinFX-pages"
+def localRepoPath = ghpagesPath+"/repository"
+
+project(":kotlinfx-core") {
+    apply plugin: 'maven'
+    uploadArchives {
+        repositories.mavenDeployer {
+            repository(url: "file:///" + localRepoPath)
+            pom.version = '0.1-SNAPSHOT'
+            pom.artifactId = 'kotlinfx'
+            pom.groupId = 'kotlinfx'
+        }
+    }
+
+// I just want to do it like this >:(!
+//task publishgh {
+//    workingDir ghpagesPath
+//    commandLine './clear-repository.sh'
+//    uploadArchives
+//    commandLine './update-directory-index.sh'
+//    commandLine 'git add . && git commit --amend -m "Upload binaries" && git push -f'
 //}
-//dependencies {
-//    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-//}
-//sourceSets {
-//    main.java.srcDirs += 'src/main/kotlin'
-//}
+
+    task clearRepo(type:Exec) {
+        workingDir ghpagesPath
+        commandLine './clear-repository.sh'
+    }
+
+    task updateIndex(type:Exec, dependsOn: [clearRepo, uploadArchives]) {
+        workingDir ghpagesPath
+        commandLine './update-directory-index.sh'
+    }
+
+    task publishgh0(type:Exec, dependsOn: updateIndex) {
+        workingDir ghpagesPath
+        commandLine 'git', 'add', '--all'
+    }
+
+    task publishgh1(type:Exec, dependsOn: publishgh0) {
+        workingDir ghpagesPath
+        commandLine 'git', 'commit', '--amend', '-m', '"Upload binaries"'
+    }
+
+    task publishgh(type:Exec, dependsOn: publishgh1) {
+        workingDir ghpagesPath
+        commandLine 'git', 'push', '-f'
+    }
+}
 
 
