@@ -67,6 +67,9 @@ def localRepoPath = ghpagesPath+"/repository"
 
 project(":kotlinfx-core") {
     apply plugin: 'maven'
+    group = "kotlinfx"
+    version = "0.1-SNAPSHOT"
+    archivesBaseName = 'kotlinfx'
     uploadArchives {
         repositories.mavenDeployer {
             repository(url: "file:///" + localRepoPath)

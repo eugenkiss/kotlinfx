@@ -15,6 +15,7 @@ import javafx.scene.control.Slider
 import javafx.beans.value.ObservableValue
 import javafx.beans.value.ObservableIntegerValue
 import javafx.scene.control.Button
+import javafx.geometry.Pos
 
 public val Node.hoverP: ReadOnlyBooleanProperty
     get() = hoverProperty()!!
@@ -33,6 +34,9 @@ public val TextField.textP: StringProperty
 
 public val TextField.disableP: BooleanProperty
     get() = disableProperty()!!
+
+public val Button.alignmentP: ObjectProperty<Pos>
+    get() = this.alignmentProperty()!!
 
 public val Button.disableP: BooleanProperty
     get() = disableProperty()!!
