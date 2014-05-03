@@ -4,6 +4,7 @@ package demos.scalafx
 import kotlinfx.builders.*
 import kotlinfx.properties.*
 import kotlinfx.bindings.*
+import kotlinfx.kalium.*
 import javafx.application.Application
 import javafx.stage.Stage
 import javafx.scene.paint.Color;
@@ -17,11 +18,8 @@ fun main(args: Array<String>) {
 
 class World : Application() {
     override fun start(stage: Stage?) {
-        Stage(stage) {
-            title = "Hello World"
-            width = 600.0
-            height = 450.0
-            scene = Scene {
+        Stage(stage, title="Hello World") {
+            scene = Scene(width=600.0, height=450.0) {
                 fill = Color.LIGHTGREEN
                 root = Pane {
                     + Rectangle {
@@ -29,7 +27,7 @@ class World : Application() {
                         y = 40.0
                         width = 100.0
                         height = 100.0
-                        fillP bind (jf (hoverP) { Color.GREEN } elze { Color.RED })
+                        fill { if (hover()) Color.GREEN else Color.RED }
                     }
                 }
             }

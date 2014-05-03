@@ -10,6 +10,9 @@ import javafx.scene.control.ProgressIndicator
 import javafx.scene.control.Slider
 import java.util.Observable
 import javafx.scene.control.Label
+import javafx.scene.shape.Rectangle
+import javafx.scene.paint.Paint
+import javafx.scene.shape.Shape
 
 
 private var enclosing: Pair<Any, String>? = null
@@ -66,6 +69,9 @@ private fun template<T>(name: String, f: (() -> T)?, thiz: Any, property: Observ
 public fun Node.disable(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("disable", f, this, disableProperty()!!)
 
+public fun Node.hover(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("hover", f, this, hoverProperty()!!)
+
 public fun Node.style(f: (() -> String)? = null): String =
     template<String>("style", f, this, styleProperty()!!)
 
@@ -83,3 +89,6 @@ public fun ProgressIndicator.progress(f: (() -> Double)? = null): Double =
 
 public fun Slider.value(f: (() -> Double)? = null): Double =
     template<Double>("slider", f, this, valueProperty()!! as ObservableValue<Double>)
+
+public fun Shape.fill(f: (() -> Paint)? = null): Paint =
+    template<Paint>("fill", f, this, fillProperty()!!)
