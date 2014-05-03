@@ -7,6 +7,7 @@ import javafx.event.ActionEvent
 import javafx.event.EventHandler
 import javafx.scene.control.ComboBox
 import javafx.scene.control.Label
+import javafx.scene.control.Slider
 
 public var Region.prefWidth: Double
     get() = getPrefWidth()
@@ -31,6 +32,10 @@ public var Button.disable: Boolean
 public var Button.onAction: EventHandler<ActionEvent>
     get() = getOnAction()!!
     set(v) = setOnAction(v)
+
+public var Slider.value: Double
+    get() = getValue()
+    set(v) = setValue(v)
 
 public var <T> ComboBox<T>.value: T
     get() = getValue()!!
