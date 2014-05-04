@@ -14,13 +14,17 @@ import javafx.beans.binding.DoubleBinding
 import javafx.beans.binding.DoubleExpression
 import javafx.beans.binding.StringExpression
 import javafx.beans.binding.NumberExpression
+import javafx.beans.binding.NumberExpressionBase
 
 
 fun <T> ObjectExpression<T>.eq(other: Any?): BooleanBinding =
     this.isEqualTo(other)!!
 
-fun NumberExpression.eq(other: Int): BooleanBinding =
+fun NumberExpressionBase.eq(other: Int): BooleanBinding =
     this.isEqualTo(other)!!
+
+fun NumberExpressionBase.plus(other: ObservableNumberValue): NumberBinding =
+    this.add(other)!!
 
 fun DoubleExpression.div(other: ObservableNumberValue): DoubleBinding =
     this.divide(other)!!

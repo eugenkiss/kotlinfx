@@ -23,7 +23,7 @@ private var isConstruction = false
 private val listenerMap: MutableMap<Pair<Any, String>, MutableSet<Any>> = hashMapOf()
 
 
-class V<T>(private var value: T) {
+public class V<T>(private var value: T) {
     val callbacks: MutableList<() -> Unit> = arrayListOf()
 
     fun invoke(): T {
@@ -41,6 +41,25 @@ class V<T>(private var value: T) {
         for (callback in callbacks) {
             callback()
         }
+    }
+}
+
+public class K<T>(private val calc: () -> T) {
+    {
+        val e = Pair(this, "K")
+        calcMap.put(e, {})
+        isConstruction = true; enclosing = e; calc(); enclosing = null; isConstruction = false
+    }
+    val callbacks: MutableList<() -> Unit> = arrayListOf()
+
+    fun invoke(): T {
+        if (enclosing != null &&
+        (isConstruction || !listenerMap.containsKey(enclosing) || !listenerMap.get(enclosing)!!.contains(this))) {
+            val e = enclosing!!
+            listenerMap.getOrPut(e) { hashSetOf() } .add(this)
+            callbacks.add { calcMap.get(e)!!() }
+        }
+        return calc()
     }
 }
 
@@ -84,6 +103,7 @@ public fun TextInputControl.text(f: (() -> String)? = null): String =
 public fun Label.text(f: (() -> String)? = null): String =
     template<String>("text", f, this, textProperty()!!)
 
+// This cast shouldn't be needed
 public fun ProgressIndicator.progress(f: (() -> Double)? = null): Double =
     template<Double>("progress", f, this, progressProperty()!! as ObservableValue<Double>)
 
