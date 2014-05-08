@@ -11,7 +11,7 @@ buildscript {
 }
 
 
-group = 'kotlinfx'
+group = 'com.eugenkiss'
 version = '0.1-SNAPSHOT'
 
 
@@ -89,7 +89,7 @@ def localRepoPath = ghpagesPath+"/repository"
 
 project(":kotlinfx-core") {
     apply plugin: 'maven'
-    group = "kotlinfx"
+    group = "com.eugenkiss"
     version = "0.1-SNAPSHOT"
     archivesBaseName = 'kotlinfx'
     uploadArchives {
@@ -97,25 +97,19 @@ project(":kotlinfx-core") {
             repository(url: "file:///" + localRepoPath)
             pom.version = '0.1-SNAPSHOT'
             pom.artifactId = 'kotlinfx'
-            pom.groupId = 'kotlinfx'
+            pom.groupId = 'com.eugenkiss'
         }
     }
 
 // I just want to do it like this >:(!
 //task publishgh {
 //    workingDir ghpagesPath
-//    commandLine './clear-repository.sh'
 //    uploadArchives
 //    commandLine './update-directory-index.sh'
 //    commandLine 'git add . && git commit --amend -m "Upload binaries" && git push -f'
 //}
 
-    task clearRepo(type:Exec) {
-        workingDir ghpagesPath
-        commandLine './clear-repository.sh'
-    }
-
-    task updateIndex(type:Exec, dependsOn: [clearRepo, uploadArchives]) {
+    task updateIndex(type:Exec, dependsOn: uploadArchives) {
         workingDir ghpagesPath
         commandLine './update-directory-index.sh'
     }
