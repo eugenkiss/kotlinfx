@@ -1,4 +1,7 @@
-package kotlinfx.kalium
+// The purpose of this file is to be able to test new implementation ideas without
+// needing to generate all the bindings
+
+package kotlinfx.kalium.test
 
 import javafx.beans.value.ObservableValue
 import javafx.beans.value.WritableValue
@@ -87,3 +90,31 @@ private fun template<T>(name: String, f: (() -> T)?, thiz: Any, property: Observ
     return property.getValue()!!
 }
 
+public fun Node.disable(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("disable", f, this, disableProperty()!!)
+
+public fun Node.hover(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("hover", f, this, hoverProperty()!!)
+
+public fun Node.style(f: (() -> String)? = null): String =
+    template<String>("style", f, this, styleProperty()!!)
+
+public fun ComboBoxBase<String>.value(f: (() -> String)? = null): String =
+    template<String>("value", f, this, valueProperty()!!)
+
+public fun TextInputControl.text(f: (() -> String)? = null): String =
+    template<String>("text", f, this, textProperty()!!)
+
+public fun Label.text(f: (() -> String)? = null): String =
+    template<String>("text", f, this, textProperty()!!)
+
+[suppress("UNCHECKED_CAST")]
+public fun ProgressIndicator.progress(f: (() -> Double)? = null): Double =
+    template<Double>("progress", f, this, progressProperty()!! as ObservableValue<Double>)
+
+[suppress("UNCHECKED_CAST")]
+public fun Slider.value(f: (() -> Double)? = null): Double =
+    template<Double>("slider", f, this, valueProperty()!! as ObservableValue<Double>)
+
+public fun Shape.fill(f: (() -> Paint)? = null): Paint =
+    template<Paint>("fill", f, this, fillProperty()!!)

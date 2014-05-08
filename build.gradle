@@ -22,8 +22,6 @@ allprojects {
             url 'http://oss.sonatype.org/content/repositories/snapshots'
         }
     }
-    sourceCompatibility = '1.8'
-    targetCompatibility = '1.8'
 }
 
 
@@ -31,22 +29,7 @@ apply plugin: "kotlin"
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-
-    // And all that just to make org.eclipse.jdt.core work
-    compile 'org.eclipse.core:org.eclipse.core.commands:3.6.0'
-    compile 'org.eclipse.core:org.eclipse.core.contenttype:3.4.100'
-    compile 'org.eclipse.core:org.eclipse.core.expressions:3.4.300'
-    compile 'org.eclipse.core:org.eclipse.core.filesystem:1.3.100'
-    compile 'org.eclipse.core:org.eclipse.core.jobs:3.5.100'
-    compile 'org.eclipse.core:org.eclipse.core.resources:3.7.100'
-    compile 'org.eclipse.core:org.eclipse.core.runtime:3.7.0'
-    compile 'org.eclipse.equinox:org.eclipse.equinox.app:1.3.100'
-    compile 'org.eclipse.equinox:org.eclipse.equinox.common:3.6.0'
-    compile 'org.eclipse.equinox:org.eclipse.equinox.preferences:3.4.1'
-    compile 'org.eclipse.equinox:org.eclipse.equinox.registry:3.5.101'
-    compile 'org.eclipse.osgi:org.eclipse.osgi:3.7.1'
-    compile 'org.eclipse.text:org.eclipse.text:3.5.101'
-    compile 'com.reubenpeeris:org.eclipse.jdt.core:3.9.50.v20140317-1741' // has Java 8 support +1!
+    compile 'org.reflections:reflections:0.9.9-RC1'
 }
 
 sourceSets {
@@ -78,6 +61,14 @@ subprojects {
     dependencies {
         compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     }
+}
+
+
+// Code generation
+
+task(genkalium, dependsOn: jar, type: JavaExec) {
+    main = 'genkaliumext.GenkaliumextPackage'
+    classpath = sourceSets.main.runtimeClasspath
 }
 
 
