@@ -2,6 +2,10 @@ package demos.sevenguis.flightbooker
 
 import kotlinfx.builders.*
 import kotlinfx.properties.*
+import kotlinfx.properties1.*
+import kotlinfx.properties2.*
+import kotlinfx.properties3.*
+import kotlinfx.properties4.*
 import kotlinfx.bindings.*
 import javafx.application.Application
 import javafx.stage.Stage
@@ -23,6 +27,7 @@ class FlightBooker : Application() {
         val startDate = TextField(LocalDate.now().asString())
         val returnDate = TextField(LocalDate.now().asString())
         val book = Button("Book")
+        book.setDisable(true)
 
         returnDate.disableP bind (flightType.valueP eq "one-way flight")
         startDate.textP.addListener{(v, o, n) ->

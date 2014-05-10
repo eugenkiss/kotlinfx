@@ -82,6 +82,10 @@ public fun  javafx.scene.control.Menu.onHidden(f: (() -> javafx.event.EventHandl
 // javafx.scene.control.Labeled
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.Labeled.alignment(f: (() -> javafx.geometry.Pos)? = null): javafx.geometry.Pos =
+    template<javafx.geometry.Pos>("alignment", f, this, alignmentProperty()!! as ObservableValue<javafx.geometry.Pos>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.Labeled.text(f: (() -> String)? = null): String =
     template<String>("text", f, this, textProperty()!! as ObservableValue<String>)
 
@@ -137,10 +141,6 @@ public fun  javafx.scene.control.Labeled.textFill(f: (() -> javafx.scene.paint.P
 public fun  javafx.scene.control.Labeled.mnemonicParsing(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("mnemonicParsing", f, this, mnemonicParsingProperty()!! as ObservableValue<Boolean>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.Labeled.alignment(f: (() -> javafx.geometry.Pos)? = null): javafx.geometry.Pos =
-    template<javafx.geometry.Pos>("alignment", f, this, alignmentProperty()!! as ObservableValue<javafx.geometry.Pos>)
-
 // javafx.css.CssMetaData
 
 // javafx.scene.control.cell.CheckBoxListCell
@@ -160,26 +160,6 @@ public fun  javafx.beans.property.ReadOnlyFloatWrapper.getReadOnly(f: (() -> Flo
     template<Float>("getReadOnly", f, this, getReadOnlyProperty()!! as ObservableValue<Float>)
 
 // javafx.stage.Stage
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.stage.Stage.minWidth(f: (() -> Double)? = null): Double =
-    template<Double>("minWidth", f, this, minWidthProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.stage.Stage.minHeight(f: (() -> Double)? = null): Double =
-    template<Double>("minHeight", f, this, minHeightProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.stage.Stage.maxWidth(f: (() -> Double)? = null): Double =
-    template<Double>("maxWidth", f, this, maxWidthProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.stage.Stage.maxHeight(f: (() -> Double)? = null): Double =
-    template<Double>("maxHeight", f, this, maxHeightProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.stage.Stage.title(f: (() -> String)? = null): String =
-    template<String>("title", f, this, titleProperty()!! as ObservableValue<String>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.stage.Stage.fullScreen(f: (() -> Boolean)? = null): Boolean =
@@ -202,8 +182,28 @@ public fun  javafx.stage.Stage.fullScreenExitHint(f: (() -> String)? = null): St
     template<String>("fullScreenExitHint", f, this, fullScreenExitHintProperty()!! as ObservableValue<String>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.stage.Stage.minWidth(f: (() -> Double)? = null): Double =
+    template<Double>("minWidth", f, this, minWidthProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.stage.Stage.minHeight(f: (() -> Double)? = null): Double =
+    template<Double>("minHeight", f, this, minHeightProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.stage.Stage.maxWidth(f: (() -> Double)? = null): Double =
+    template<Double>("maxWidth", f, this, maxWidthProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.stage.Stage.maxHeight(f: (() -> Double)? = null): Double =
+    template<Double>("maxHeight", f, this, maxHeightProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.stage.Stage.resizable(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("resizable", f, this, resizableProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.stage.Stage.title(f: (() -> String)? = null): String =
+    template<String>("title", f, this, titleProperty()!! as ObservableValue<String>)
 
 // javafx.scene.control.CheckBox
 
@@ -228,8 +228,8 @@ public fun  javafx.animation.SequentialTransition.node(f: (() -> javafx.scene.No
 // javafx.scene.layout.FlowPane
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.layout.FlowPane.prefWrapLength(f: (() -> Double)? = null): Double =
-    template<Double>("prefWrapLength", f, this, prefWrapLengthProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.layout.FlowPane.orientation(f: (() -> javafx.geometry.Orientation)? = null): javafx.geometry.Orientation =
+    template<javafx.geometry.Orientation>("orientation", f, this, orientationProperty()!! as ObservableValue<javafx.geometry.Orientation>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.layout.FlowPane.alignment(f: (() -> javafx.geometry.Pos)? = null): javafx.geometry.Pos =
@@ -252,8 +252,8 @@ public fun  javafx.scene.layout.FlowPane.rowValignment(f: (() -> javafx.geometry
     template<javafx.geometry.VPos>("rowValignment", f, this, rowValignmentProperty()!! as ObservableValue<javafx.geometry.VPos>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.layout.FlowPane.orientation(f: (() -> javafx.geometry.Orientation)? = null): javafx.geometry.Orientation =
-    template<javafx.geometry.Orientation>("orientation", f, this, orientationProperty()!! as ObservableValue<javafx.geometry.Orientation>)
+public fun  javafx.scene.layout.FlowPane.prefWrapLength(f: (() -> Double)? = null): Double =
+    template<Double>("prefWrapLength", f, this, prefWrapLengthProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.Node
 
@@ -580,6 +580,14 @@ public fun  javafx.scene.Node.eventDispatcher(f: (() -> javafx.event.EventDispat
 // javafx.scene.SubScene
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.SubScene.root(f: (() -> javafx.scene.Parent)? = null): javafx.scene.Parent =
+    template<javafx.scene.Parent>("root", f, this, rootProperty()!! as ObservableValue<javafx.scene.Parent>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.SubScene.camera(f: (() -> javafx.scene.Camera)? = null): javafx.scene.Camera =
+    template<javafx.scene.Camera>("camera", f, this, cameraProperty()!! as ObservableValue<javafx.scene.Camera>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.SubScene.width(f: (() -> Double)? = null): Double =
     template<Double>("width", f, this, widthProperty()!! as ObservableValue<Double>)
 
@@ -590,14 +598,6 @@ public fun  javafx.scene.SubScene.height(f: (() -> Double)? = null): Double =
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.SubScene.fill(f: (() -> javafx.scene.paint.Paint)? = null): javafx.scene.paint.Paint =
     template<javafx.scene.paint.Paint>("fill", f, this, fillProperty()!! as ObservableValue<javafx.scene.paint.Paint>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.SubScene.root(f: (() -> javafx.scene.Parent)? = null): javafx.scene.Parent =
-    template<javafx.scene.Parent>("root", f, this, rootProperty()!! as ObservableValue<javafx.scene.Parent>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.SubScene.camera(f: (() -> javafx.scene.Camera)? = null): javafx.scene.Camera =
-    template<javafx.scene.Camera>("camera", f, this, cameraProperty()!! as ObservableValue<javafx.scene.Camera>)
 
 // javafx.scene.control.Control
 
@@ -616,6 +616,10 @@ public fun  javafx.scene.control.Control.contextMenu(f: (() -> javafx.scene.cont
 // javafx.scene.effect.ColorInput
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.ColorInput.paint(f: (() -> javafx.scene.paint.Paint)? = null): javafx.scene.paint.Paint =
+    template<javafx.scene.paint.Paint>("paint", f, this, paintProperty()!! as ObservableValue<javafx.scene.paint.Paint>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.ColorInput.width(f: (() -> Double)? = null): Double =
     template<Double>("width", f, this, widthProperty()!! as ObservableValue<Double>)
 
@@ -624,16 +628,12 @@ public fun  javafx.scene.effect.ColorInput.height(f: (() -> Double)? = null): Do
     template<Double>("height", f, this, heightProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.ColorInput.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.ColorInput.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.ColorInput.paint(f: (() -> javafx.scene.paint.Paint)? = null): javafx.scene.paint.Paint =
-    template<javafx.scene.paint.Paint>("paint", f, this, paintProperty()!! as ObservableValue<javafx.scene.paint.Paint>)
+public fun  javafx.scene.effect.ColorInput.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.PerspectiveCamera
 
@@ -648,16 +648,8 @@ public fun  javafx.scene.PerspectiveCamera.verticalFieldOfView(f: (() -> Boolean
 // javafx.scene.control.DatePicker
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.DatePicker.showWeekNumbers(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("showWeekNumbers", f, this, showWeekNumbersProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.DatePicker.converter(f: (() -> javafx.util.StringConverter<java.time.LocalDate>)? = null): javafx.util.StringConverter<java.time.LocalDate> =
     template<javafx.util.StringConverter<java.time.LocalDate>>("converter", f, this, converterProperty()!! as ObservableValue<javafx.util.StringConverter<java.time.LocalDate>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.DatePicker.editor(f: (() -> javafx.scene.control.TextField)? = null): javafx.scene.control.TextField =
-    template<javafx.scene.control.TextField>("editor", f, this, editorProperty()!! as ObservableValue<javafx.scene.control.TextField>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.DatePicker.dayCellFactory(f: (() -> javafx.util.Callback<javafx.scene.control.DatePicker, javafx.scene.control.DateCell>)? = null): javafx.util.Callback<javafx.scene.control.DatePicker, javafx.scene.control.DateCell> =
@@ -666,6 +658,14 @@ public fun  javafx.scene.control.DatePicker.dayCellFactory(f: (() -> javafx.util
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.DatePicker.chronology(f: (() -> java.time.chrono.Chronology)? = null): java.time.chrono.Chronology =
     template<java.time.chrono.Chronology>("chronology", f, this, chronologyProperty()!! as ObservableValue<java.time.chrono.Chronology>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.DatePicker.showWeekNumbers(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("showWeekNumbers", f, this, showWeekNumbersProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.DatePicker.editor(f: (() -> javafx.scene.control.TextField)? = null): javafx.scene.control.TextField =
+    template<javafx.scene.control.TextField>("editor", f, this, editorProperty()!! as ObservableValue<javafx.scene.control.TextField>)
 
 // javafx.print.PageRange
 
@@ -684,10 +684,6 @@ public fun  javafx.scene.media.MediaView.onError(f: (() -> javafx.event.EventHan
     template<javafx.event.EventHandler<javafx.scene.media.MediaErrorEvent>>("onError", f, this, onErrorProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.media.MediaErrorEvent>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.MediaView.smooth(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("smooth", f, this, smoothProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.media.MediaView.mediaPlayer(f: (() -> javafx.scene.media.MediaPlayer)? = null): javafx.scene.media.MediaPlayer =
     template<javafx.scene.media.MediaPlayer>("mediaPlayer", f, this, mediaPlayerProperty()!! as ObservableValue<javafx.scene.media.MediaPlayer>)
 
@@ -696,12 +692,16 @@ public fun  javafx.scene.media.MediaView.preserveRatio(f: (() -> Boolean)? = nul
     template<Boolean>("preserveRatio", f, this, preserveRatioProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.MediaView.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.media.MediaView.smooth(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("smooth", f, this, smoothProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.media.MediaView.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.media.MediaView.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.media.MediaView.fitHeight(f: (() -> Double)? = null): Double =
@@ -776,8 +776,44 @@ public fun  javafx.scene.control.PopupControl.maxHeight(f: (() -> Double)? = nul
 // javafx.scene.control.TreeTableView
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TreeTableView<S>.editable(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("editable", f, this, editableProperty()!! as ObservableValue<Boolean>)
+public fun <S> javafx.scene.control.TreeTableView<S>.onScrollToColumn(f: (() -> javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<javafx.scene.control.TreeTableColumn<S, *>>>)? = null): javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<javafx.scene.control.TreeTableColumn<S, *>>> =
+    template<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<javafx.scene.control.TreeTableColumn<S, *>>>>("onScrollToColumn", f, this, onScrollToColumnProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<javafx.scene.control.TreeTableColumn<S, *>>>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TreeTableView<S>.onScrollTo(f: (() -> javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>)? = null): javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>> =
+    template<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>("onScrollTo", f, this, onScrollToProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TreeTableView<S>.selectionModel(f: (() -> javafx.scene.control.TreeTableView.TreeTableViewSelectionModel<S>)? = null): javafx.scene.control.TreeTableView.TreeTableViewSelectionModel<S> =
+    template<javafx.scene.control.TreeTableView.TreeTableViewSelectionModel<S>>("selectionModel", f, this, selectionModelProperty()!! as ObservableValue<javafx.scene.control.TreeTableView.TreeTableViewSelectionModel<S>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TreeTableView<S>.sortPolicy(f: (() -> javafx.util.Callback<javafx.scene.control.TreeTableView<S>, Boolean>)? = null): javafx.util.Callback<javafx.scene.control.TreeTableView<S>, Boolean> =
+    template<javafx.util.Callback<javafx.scene.control.TreeTableView<S>, Boolean>>("sortPolicy", f, this, sortPolicyProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TreeTableView<S>, Boolean>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TreeTableView<S>.columnResizePolicy(f: (() -> javafx.util.Callback<javafx.scene.control.TreeTableView.ResizeFeatures<S>, Boolean>)? = null): javafx.util.Callback<javafx.scene.control.TreeTableView.ResizeFeatures<S>, Boolean> =
+    template<javafx.util.Callback<javafx.scene.control.TreeTableView.ResizeFeatures<S>, Boolean>>("columnResizePolicy", f, this, columnResizePolicyProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TreeTableView.ResizeFeatures<S>, Boolean>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TreeTableView<S>.onSort(f: (() -> javafx.event.EventHandler<javafx.scene.control.SortEvent<javafx.scene.control.TreeTableView<S>>>)? = null): javafx.event.EventHandler<javafx.scene.control.SortEvent<javafx.scene.control.TreeTableView<S>>> =
+    template<javafx.event.EventHandler<javafx.scene.control.SortEvent<javafx.scene.control.TreeTableView<S>>>>("onSort", f, this, onSortProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.SortEvent<javafx.scene.control.TreeTableView<S>>>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TreeTableView<S>.root(f: (() -> javafx.scene.control.TreeItem<S>)? = null): javafx.scene.control.TreeItem<S> =
+    template<javafx.scene.control.TreeItem<S>>("root", f, this, rootProperty()!! as ObservableValue<javafx.scene.control.TreeItem<S>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TreeTableView<S>.placeholder(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
+    template<javafx.scene.Node>("placeholder", f, this, placeholderProperty()!! as ObservableValue<javafx.scene.Node>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TreeTableView<S>.focusModel(f: (() -> javafx.scene.control.TreeTableView.TreeTableViewFocusModel<S>)? = null): javafx.scene.control.TreeTableView.TreeTableViewFocusModel<S> =
+    template<javafx.scene.control.TreeTableView.TreeTableViewFocusModel<S>>("focusModel", f, this, focusModelProperty()!! as ObservableValue<javafx.scene.control.TreeTableView.TreeTableViewFocusModel<S>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TreeTableView<S>.showRoot(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("showRoot", f, this, showRootProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <S> javafx.scene.control.TreeTableView<S>.treeColumn(f: (() -> javafx.scene.control.TreeTableColumn<S, *>)? = null): javafx.scene.control.TreeTableColumn<S, *> =
@@ -804,52 +840,16 @@ public fun <S> javafx.scene.control.TreeTableView<S>.sortMode(f: (() -> javafx.s
     template<javafx.scene.control.TreeSortMode>("sortMode", f, this, sortModeProperty()!! as ObservableValue<javafx.scene.control.TreeSortMode>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TreeTableView<S>.editable(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("editable", f, this, editableProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <S> javafx.scene.control.TreeTableView<S>.comparator(f: (() -> java.util.Comparator<javafx.scene.control.TreeItem<S>>)? = null): java.util.Comparator<javafx.scene.control.TreeItem<S>> =
     template<java.util.Comparator<javafx.scene.control.TreeItem<S>>>("comparator", f, this, comparatorProperty()!! as ObservableValue<java.util.Comparator<javafx.scene.control.TreeItem<S>>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TreeTableView<S>.onScrollToColumn(f: (() -> javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<javafx.scene.control.TreeTableColumn<S, *>>>)? = null): javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<javafx.scene.control.TreeTableColumn<S, *>>> =
-    template<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<javafx.scene.control.TreeTableColumn<S, *>>>>("onScrollToColumn", f, this, onScrollToColumnProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<javafx.scene.control.TreeTableColumn<S, *>>>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TreeTableView<S>.onScrollTo(f: (() -> javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>)? = null): javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>> =
-    template<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>("onScrollTo", f, this, onScrollToProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TreeTableView<S>.showRoot(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("showRoot", f, this, showRootProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <S> javafx.scene.control.TreeTableView<S>.fixedCellSize(f: (() -> Double)? = null): Double =
     template<Double>("fixedCellSize", f, this, fixedCellSizeProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TreeTableView<S>.root(f: (() -> javafx.scene.control.TreeItem<S>)? = null): javafx.scene.control.TreeItem<S> =
-    template<javafx.scene.control.TreeItem<S>>("root", f, this, rootProperty()!! as ObservableValue<javafx.scene.control.TreeItem<S>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TreeTableView<S>.selectionModel(f: (() -> javafx.scene.control.TreeTableView.TreeTableViewSelectionModel<S>)? = null): javafx.scene.control.TreeTableView.TreeTableViewSelectionModel<S> =
-    template<javafx.scene.control.TreeTableView.TreeTableViewSelectionModel<S>>("selectionModel", f, this, selectionModelProperty()!! as ObservableValue<javafx.scene.control.TreeTableView.TreeTableViewSelectionModel<S>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TreeTableView<S>.sortPolicy(f: (() -> javafx.util.Callback<javafx.scene.control.TreeTableView<S>, Boolean>)? = null): javafx.util.Callback<javafx.scene.control.TreeTableView<S>, Boolean> =
-    template<javafx.util.Callback<javafx.scene.control.TreeTableView<S>, Boolean>>("sortPolicy", f, this, sortPolicyProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TreeTableView<S>, Boolean>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TreeTableView<S>.columnResizePolicy(f: (() -> javafx.util.Callback<javafx.scene.control.TreeTableView.ResizeFeatures<S>, Boolean>)? = null): javafx.util.Callback<javafx.scene.control.TreeTableView.ResizeFeatures<S>, Boolean> =
-    template<javafx.util.Callback<javafx.scene.control.TreeTableView.ResizeFeatures<S>, Boolean>>("columnResizePolicy", f, this, columnResizePolicyProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TreeTableView.ResizeFeatures<S>, Boolean>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TreeTableView<S>.onSort(f: (() -> javafx.event.EventHandler<javafx.scene.control.SortEvent<javafx.scene.control.TreeTableView<S>>>)? = null): javafx.event.EventHandler<javafx.scene.control.SortEvent<javafx.scene.control.TreeTableView<S>>> =
-    template<javafx.event.EventHandler<javafx.scene.control.SortEvent<javafx.scene.control.TreeTableView<S>>>>("onSort", f, this, onSortProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.SortEvent<javafx.scene.control.TreeTableView<S>>>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TreeTableView<S>.placeholder(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
-    template<javafx.scene.Node>("placeholder", f, this, placeholderProperty()!! as ObservableValue<javafx.scene.Node>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TreeTableView<S>.focusModel(f: (() -> javafx.scene.control.TreeTableView.TreeTableViewFocusModel<S>)? = null): javafx.scene.control.TreeTableView.TreeTableViewFocusModel<S> =
-    template<javafx.scene.control.TreeTableView.TreeTableViewFocusModel<S>>("focusModel", f, this, focusModelProperty()!! as ObservableValue<javafx.scene.control.TreeTableView.TreeTableViewFocusModel<S>>)
 
 // javafx.beans.property.ReadOnlyStringWrapper
 
@@ -864,6 +864,26 @@ public fun  javafx.animation.ParallelTransition.node(f: (() -> javafx.scene.Node
     template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
 
 // javafx.scene.text.Text
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.text.Text.textOrigin(f: (() -> javafx.geometry.VPos)? = null): javafx.geometry.VPos =
+    template<javafx.geometry.VPos>("textOrigin", f, this, textOriginProperty()!! as ObservableValue<javafx.geometry.VPos>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.text.Text.strikethrough(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("strikethrough", f, this, strikethroughProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.text.Text.fontSmoothingType(f: (() -> javafx.scene.text.FontSmoothingType)? = null): javafx.scene.text.FontSmoothingType =
+    template<javafx.scene.text.FontSmoothingType>("fontSmoothingType", f, this, fontSmoothingTypeProperty()!! as ObservableValue<javafx.scene.text.FontSmoothingType>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.text.Text.wrappingWidth(f: (() -> Double)? = null): Double =
+    template<Double>("wrappingWidth", f, this, wrappingWidthProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.text.Text.boundsType(f: (() -> javafx.scene.text.TextBoundsType)? = null): javafx.scene.text.TextBoundsType =
+    template<javafx.scene.text.TextBoundsType>("boundsType", f, this, boundsTypeProperty()!! as ObservableValue<javafx.scene.text.TextBoundsType>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.text.Text.text(f: (() -> String)? = null): String =
@@ -886,36 +906,16 @@ public fun  javafx.scene.text.Text.lineSpacing(f: (() -> Double)? = null): Doubl
     template<Double>("lineSpacing", f, this, lineSpacingProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.text.Text.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.text.Text.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.text.Text.textOrigin(f: (() -> javafx.geometry.VPos)? = null): javafx.geometry.VPos =
-    template<javafx.geometry.VPos>("textOrigin", f, this, textOriginProperty()!! as ObservableValue<javafx.geometry.VPos>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.text.Text.strikethrough(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("strikethrough", f, this, strikethroughProperty()!! as ObservableValue<Boolean>)
+public fun  javafx.scene.text.Text.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.text.Text.baselineOffset(f: (() -> Double)? = null): Double =
     template<Double>("baselineOffset", f, this, baselineOffsetProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.text.Text.fontSmoothingType(f: (() -> javafx.scene.text.FontSmoothingType)? = null): javafx.scene.text.FontSmoothingType =
-    template<javafx.scene.text.FontSmoothingType>("fontSmoothingType", f, this, fontSmoothingTypeProperty()!! as ObservableValue<javafx.scene.text.FontSmoothingType>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.text.Text.wrappingWidth(f: (() -> Double)? = null): Double =
-    template<Double>("wrappingWidth", f, this, wrappingWidthProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.text.Text.boundsType(f: (() -> javafx.scene.text.TextBoundsType)? = null): javafx.scene.text.TextBoundsType =
-    template<javafx.scene.text.TextBoundsType>("boundsType", f, this, boundsTypeProperty()!! as ObservableValue<javafx.scene.text.TextBoundsType>)
 
 // javafx.scene.control.Button
 
@@ -960,6 +960,22 @@ public fun  javafx.scene.layout.ColumnConstraints.fillWidth(f: (() -> Boolean)? 
 // javafx.scene.control.Slider
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.Slider.orientation(f: (() -> javafx.geometry.Orientation)? = null): javafx.geometry.Orientation =
+    template<javafx.geometry.Orientation>("orientation", f, this, orientationProperty()!! as ObservableValue<javafx.geometry.Orientation>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.Slider.blockIncrement(f: (() -> Double)? = null): Double =
+    template<Double>("blockIncrement", f, this, blockIncrementProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.Slider.min(f: (() -> Double)? = null): Double =
+    template<Double>("min", f, this, minProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.Slider.max(f: (() -> Double)? = null): Double =
+    template<Double>("max", f, this, maxProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.Slider.value(f: (() -> Double)? = null): Double =
     template<Double>("value", f, this, valueProperty()!! as ObservableValue<Double>)
 
@@ -976,28 +992,12 @@ public fun  javafx.scene.control.Slider.showTickLabels(f: (() -> Boolean)? = nul
     template<Boolean>("showTickLabels", f, this, showTickLabelsProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.Slider.majorTickUnit(f: (() -> Double)? = null): Double =
-    template<Double>("majorTickUnit", f, this, majorTickUnitProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.Slider.snapToTicks(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("snapToTicks", f, this, snapToTicksProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.Slider.min(f: (() -> Double)? = null): Double =
-    template<Double>("min", f, this, minProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.Slider.max(f: (() -> Double)? = null): Double =
-    template<Double>("max", f, this, maxProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.Slider.orientation(f: (() -> javafx.geometry.Orientation)? = null): javafx.geometry.Orientation =
-    template<javafx.geometry.Orientation>("orientation", f, this, orientationProperty()!! as ObservableValue<javafx.geometry.Orientation>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.Slider.blockIncrement(f: (() -> Double)? = null): Double =
-    template<Double>("blockIncrement", f, this, blockIncrementProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.control.Slider.majorTickUnit(f: (() -> Double)? = null): Double =
+    template<Double>("majorTickUnit", f, this, majorTickUnitProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.Slider.valueChanging(f: (() -> Boolean)? = null): Boolean =
@@ -1012,6 +1012,10 @@ public fun  javafx.scene.control.Slider.labelFormatter(f: (() -> javafx.util.Str
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <V> javafx.concurrent.Service<V>.value(f: (() -> V)? = null): V =
     template<V>("value", f, this, valueProperty()!! as ObservableValue<V>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <V> javafx.concurrent.Service<V>.onReady(f: (() -> javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>)? = null): javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent> =
+    template<javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>>("onReady", f, this, onReadyProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <V> javafx.concurrent.Service<V>.exception(f: (() -> Throwable)? = null): Throwable =
@@ -1046,14 +1050,6 @@ public fun <V> javafx.concurrent.Service<V>.state(f: (() -> javafx.concurrent.Wo
     template<javafx.concurrent.Worker.State>("state", f, this, stateProperty()!! as ObservableValue<javafx.concurrent.Worker.State>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <V> javafx.concurrent.Service<V>.onReady(f: (() -> javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>)? = null): javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent> =
-    template<javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>>("onReady", f, this, onReadyProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <V> javafx.concurrent.Service<V>.executor(f: (() -> java.util.concurrent.Executor)? = null): java.util.concurrent.Executor =
-    template<java.util.concurrent.Executor>("executor", f, this, executorProperty()!! as ObservableValue<java.util.concurrent.Executor>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <V> javafx.concurrent.Service<V>.onScheduled(f: (() -> javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>)? = null): javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent> =
     template<javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>>("onScheduled", f, this, onScheduledProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>>)
 
@@ -1073,6 +1069,10 @@ public fun <V> javafx.concurrent.Service<V>.onCancelled(f: (() -> javafx.event.E
 public fun <V> javafx.concurrent.Service<V>.onFailed(f: (() -> javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>)? = null): javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent> =
     template<javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>>("onFailed", f, this, onFailedProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.concurrent.WorkerStateEvent>>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <V> javafx.concurrent.Service<V>.executor(f: (() -> java.util.concurrent.Executor)? = null): java.util.concurrent.Executor =
+    template<java.util.concurrent.Executor>("executor", f, this, executorProperty()!! as ObservableValue<java.util.concurrent.Executor>)
+
 // javafx.scene.chart.StackedBarChart
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -1090,20 +1090,20 @@ public fun  javafx.scene.shape.Rectangle.height(f: (() -> Double)? = null): Doub
     template<Double>("height", f, this, heightProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.Rectangle.arcWidth(f: (() -> Double)? = null): Double =
-    template<Double>("arcWidth", f, this, arcWidthProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.Rectangle.arcHeight(f: (() -> Double)? = null): Double =
-    template<Double>("arcHeight", f, this, arcHeightProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.shape.Rectangle.y(f: (() -> Double)? = null): Double =
+    template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.Rectangle.x(f: (() -> Double)? = null): Double =
     template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.Rectangle.y(f: (() -> Double)? = null): Double =
-    template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.shape.Rectangle.arcWidth(f: (() -> Double)? = null): Double =
+    template<Double>("arcWidth", f, this, arcWidthProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.Rectangle.arcHeight(f: (() -> Double)? = null): Double =
+    template<Double>("arcHeight", f, this, arcHeightProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.effect.Shadow
 
@@ -1156,18 +1156,6 @@ public fun  javafx.scene.web.WebHistory.maxSize(f: (() -> Int)? = null): Int =
 // javafx.scene.chart.ValueAxis
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T:Number> javafx.scene.chart.ValueAxis<T>.minorTickCount(f: (() -> Int)? = null): Int =
-    template<Int>("minorTickCount", f, this, minorTickCountProperty()!! as ObservableValue<Int>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T:Number> javafx.scene.chart.ValueAxis<T>.minorTickLength(f: (() -> Double)? = null): Double =
-    template<Double>("minorTickLength", f, this, minorTickLengthProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T:Number> javafx.scene.chart.ValueAxis<T>.minorTickVisible(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("minorTickVisible", f, this, minorTickVisibleProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T:Number> javafx.scene.chart.ValueAxis<T>.scale(f: (() -> Double)? = null): Double =
     template<Double>("scale", f, this, scaleProperty()!! as ObservableValue<Double>)
 
@@ -1183,6 +1171,18 @@ public fun <T:Number> javafx.scene.chart.ValueAxis<T>.lowerBound(f: (() -> Doubl
 public fun <T:Number> javafx.scene.chart.ValueAxis<T>.tickLabelFormatter(f: (() -> javafx.util.StringConverter<T>)? = null): javafx.util.StringConverter<T> =
     template<javafx.util.StringConverter<T>>("tickLabelFormatter", f, this, tickLabelFormatterProperty()!! as ObservableValue<javafx.util.StringConverter<T>>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T:Number> javafx.scene.chart.ValueAxis<T>.minorTickCount(f: (() -> Int)? = null): Int =
+    template<Int>("minorTickCount", f, this, minorTickCountProperty()!! as ObservableValue<Int>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T:Number> javafx.scene.chart.ValueAxis<T>.minorTickLength(f: (() -> Double)? = null): Double =
+    template<Double>("minorTickLength", f, this, minorTickLengthProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T:Number> javafx.scene.chart.ValueAxis<T>.minorTickVisible(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("minorTickVisible", f, this, minorTickVisibleProperty()!! as ObservableValue<Boolean>)
+
 // javafx.scene.media.MediaPlayer
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -1190,16 +1190,40 @@ public fun  javafx.scene.media.MediaPlayer.onError(f: (() -> Runnable)? = null):
     template<Runnable>("onError", f, this, onErrorProperty()!! as ObservableValue<Runnable>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.MediaPlayer.error(f: (() -> javafx.scene.media.MediaException)? = null): javafx.scene.media.MediaException =
-    template<javafx.scene.media.MediaException>("error", f, this, errorProperty()!! as ObservableValue<javafx.scene.media.MediaException>)
+public fun  javafx.scene.media.MediaPlayer.rate(f: (() -> Double)? = null): Double =
+    template<Double>("rate", f, this, rateProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.MediaPlayer.stopTime(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
-    template<javafx.util.Duration>("stopTime", f, this, stopTimeProperty()!! as ObservableValue<javafx.util.Duration>)
+public fun  javafx.scene.media.MediaPlayer.currentRate(f: (() -> Double)? = null): Double =
+    template<Double>("currentRate", f, this, currentRateProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.media.MediaPlayer.cycleDuration(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
+    template<javafx.util.Duration>("cycleDuration", f, this, cycleDurationProperty()!! as ObservableValue<javafx.util.Duration>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.media.MediaPlayer.totalDuration(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
+    template<javafx.util.Duration>("totalDuration", f, this, totalDurationProperty()!! as ObservableValue<javafx.util.Duration>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.media.MediaPlayer.currentTime(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
+    template<javafx.util.Duration>("currentTime", f, this, currentTimeProperty()!! as ObservableValue<javafx.util.Duration>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.media.MediaPlayer.cycleCount(f: (() -> Int)? = null): Int =
+    template<Int>("cycleCount", f, this, cycleCountProperty()!! as ObservableValue<Int>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.media.MediaPlayer.status(f: (() -> javafx.scene.media.MediaPlayer.Status)? = null): javafx.scene.media.MediaPlayer.Status =
+    template<javafx.scene.media.MediaPlayer.Status>("status", f, this, statusProperty()!! as ObservableValue<javafx.scene.media.MediaPlayer.Status>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.media.MediaPlayer.mute(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("mute", f, this, muteProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.media.MediaPlayer.stopTime(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
+    template<javafx.util.Duration>("stopTime", f, this, stopTimeProperty()!! as ObservableValue<javafx.util.Duration>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.media.MediaPlayer.audioSpectrumListener(f: (() -> javafx.scene.media.AudioSpectrumListener)? = null): javafx.scene.media.AudioSpectrumListener =
@@ -1278,32 +1302,8 @@ public fun  javafx.scene.media.MediaPlayer.onStalled(f: (() -> Runnable)? = null
     template<Runnable>("onStalled", f, this, onStalledProperty()!! as ObservableValue<Runnable>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.MediaPlayer.rate(f: (() -> Double)? = null): Double =
-    template<Double>("rate", f, this, rateProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.MediaPlayer.currentRate(f: (() -> Double)? = null): Double =
-    template<Double>("currentRate", f, this, currentRateProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.MediaPlayer.cycleDuration(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
-    template<javafx.util.Duration>("cycleDuration", f, this, cycleDurationProperty()!! as ObservableValue<javafx.util.Duration>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.MediaPlayer.totalDuration(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
-    template<javafx.util.Duration>("totalDuration", f, this, totalDurationProperty()!! as ObservableValue<javafx.util.Duration>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.MediaPlayer.currentTime(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
-    template<javafx.util.Duration>("currentTime", f, this, currentTimeProperty()!! as ObservableValue<javafx.util.Duration>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.MediaPlayer.cycleCount(f: (() -> Int)? = null): Int =
-    template<Int>("cycleCount", f, this, cycleCountProperty()!! as ObservableValue<Int>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.MediaPlayer.status(f: (() -> javafx.scene.media.MediaPlayer.Status)? = null): javafx.scene.media.MediaPlayer.Status =
-    template<javafx.scene.media.MediaPlayer.Status>("status", f, this, statusProperty()!! as ObservableValue<javafx.scene.media.MediaPlayer.Status>)
+public fun  javafx.scene.media.MediaPlayer.error(f: (() -> javafx.scene.media.MediaException)? = null): javafx.scene.media.MediaException =
+    template<javafx.scene.media.MediaException>("error", f, this, errorProperty()!! as ObservableValue<javafx.scene.media.MediaException>)
 
 // javafx.scene.ImageCursor
 
@@ -1322,24 +1322,24 @@ public fun  javafx.scene.ImageCursor.hotspotY(f: (() -> Double)? = null): Double
 // javafx.scene.image.ImageView
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.image.ImageView.smooth(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("smooth", f, this, smoothProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.image.ImageView.preserveRatio(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("preserveRatio", f, this, preserveRatioProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.image.ImageView.image(f: (() -> javafx.scene.image.Image)? = null): javafx.scene.image.Image =
-    template<javafx.scene.image.Image>("image", f, this, imageProperty()!! as ObservableValue<javafx.scene.image.Image>)
+public fun  javafx.scene.image.ImageView.smooth(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("smooth", f, this, smoothProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.image.ImageView.y(f: (() -> Double)? = null): Double =
+    template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.image.ImageView.x(f: (() -> Double)? = null): Double =
     template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.image.ImageView.y(f: (() -> Double)? = null): Double =
-    template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.image.ImageView.image(f: (() -> javafx.scene.image.Image)? = null): javafx.scene.image.Image =
+    template<javafx.scene.image.Image>("image", f, this, imageProperty()!! as ObservableValue<javafx.scene.image.Image>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.image.ImageView.fitHeight(f: (() -> Double)? = null): Double =
@@ -1354,22 +1354,6 @@ public fun  javafx.scene.image.ImageView.fitWidth(f: (() -> Double)? = null): Do
     template<Double>("fitWidth", f, this, fitWidthProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.control.ComboBox
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ComboBox<T>.converter(f: (() -> javafx.util.StringConverter<T>)? = null): javafx.util.StringConverter<T> =
-    template<javafx.util.StringConverter<T>>("converter", f, this, converterProperty()!! as ObservableValue<javafx.util.StringConverter<T>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ComboBox<T>.buttonCell(f: (() -> javafx.scene.control.ListCell<T>)? = null): javafx.scene.control.ListCell<T> =
-    template<javafx.scene.control.ListCell<T>>("buttonCell", f, this, buttonCellProperty()!! as ObservableValue<javafx.scene.control.ListCell<T>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ComboBox<T>.visibleRowCount(f: (() -> Int)? = null): Int =
-    template<Int>("visibleRowCount", f, this, visibleRowCountProperty()!! as ObservableValue<Int>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ComboBox<T>.editor(f: (() -> javafx.scene.control.TextField)? = null): javafx.scene.control.TextField =
-    template<javafx.scene.control.TextField>("editor", f, this, editorProperty()!! as ObservableValue<javafx.scene.control.TextField>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.ComboBox<T>.items(f: (() -> javafx.collections.ObservableList<T>)? = null): javafx.collections.ObservableList<T> =
@@ -1387,15 +1371,31 @@ public fun <T> javafx.scene.control.ComboBox<T>.placeholder(f: (() -> javafx.sce
 public fun <T> javafx.scene.control.ComboBox<T>.cellFactory(f: (() -> javafx.util.Callback<javafx.scene.control.ListView<T>, javafx.scene.control.ListCell<T>>)? = null): javafx.util.Callback<javafx.scene.control.ListView<T>, javafx.scene.control.ListCell<T>> =
     template<javafx.util.Callback<javafx.scene.control.ListView<T>, javafx.scene.control.ListCell<T>>>("cellFactory", f, this, cellFactoryProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.ListView<T>, javafx.scene.control.ListCell<T>>>)
 
-// javafx.scene.shape.LineTo
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.ComboBox<T>.converter(f: (() -> javafx.util.StringConverter<T>)? = null): javafx.util.StringConverter<T> =
+    template<javafx.util.StringConverter<T>>("converter", f, this, converterProperty()!! as ObservableValue<javafx.util.StringConverter<T>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.LineTo.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
+public fun <T> javafx.scene.control.ComboBox<T>.buttonCell(f: (() -> javafx.scene.control.ListCell<T>)? = null): javafx.scene.control.ListCell<T> =
+    template<javafx.scene.control.ListCell<T>>("buttonCell", f, this, buttonCellProperty()!! as ObservableValue<javafx.scene.control.ListCell<T>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.ComboBox<T>.visibleRowCount(f: (() -> Int)? = null): Int =
+    template<Int>("visibleRowCount", f, this, visibleRowCountProperty()!! as ObservableValue<Int>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.ComboBox<T>.editor(f: (() -> javafx.scene.control.TextField)? = null): javafx.scene.control.TextField =
+    template<javafx.scene.control.TextField>("editor", f, this, editorProperty()!! as ObservableValue<javafx.scene.control.TextField>)
+
+// javafx.scene.shape.LineTo
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.LineTo.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.LineTo.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 // javafx.collections.transformation.SortedList
 
@@ -1416,12 +1416,12 @@ public fun <K, V> javafx.beans.binding.MapExpression<K, V>.size(f: (() -> Int)? 
 // javafx.scene.control.ProgressIndicator
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.ProgressIndicator.progress(f: (() -> Double)? = null): Double =
-    template<Double>("progress", f, this, progressProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.ProgressIndicator.indeterminate(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("indeterminate", f, this, indeterminateProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.ProgressIndicator.progress(f: (() -> Double)? = null): Double =
+    template<Double>("progress", f, this, progressProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.Scene
 
@@ -1598,6 +1598,14 @@ public fun  javafx.scene.Scene.eventDispatcher(f: (() -> javafx.event.EventDispa
     template<javafx.event.EventDispatcher>("eventDispatcher", f, this, eventDispatcherProperty()!! as ObservableValue<javafx.event.EventDispatcher>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.Scene.root(f: (() -> javafx.scene.Parent)? = null): javafx.scene.Parent =
+    template<javafx.scene.Parent>("root", f, this, rootProperty()!! as ObservableValue<javafx.scene.Parent>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.Scene.camera(f: (() -> javafx.scene.Camera)? = null): javafx.scene.Camera =
+    template<javafx.scene.Camera>("camera", f, this, cameraProperty()!! as ObservableValue<javafx.scene.Camera>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.Scene.width(f: (() -> Double)? = null): Double =
     template<Double>("width", f, this, widthProperty()!! as ObservableValue<Double>)
 
@@ -1610,6 +1618,14 @@ public fun  javafx.scene.Scene.fill(f: (() -> javafx.scene.paint.Paint)? = null)
     template<javafx.scene.paint.Paint>("fill", f, this, fillProperty()!! as ObservableValue<javafx.scene.paint.Paint>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.Scene.y(f: (() -> Double)? = null): Double =
+    template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.Scene.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.Scene.window(f: (() -> javafx.stage.Window)? = null): javafx.stage.Window =
     template<javafx.stage.Window>("window", f, this, windowProperty()!! as ObservableValue<javafx.stage.Window>)
 
@@ -1617,23 +1633,11 @@ public fun  javafx.scene.Scene.window(f: (() -> javafx.stage.Window)? = null): j
 public fun  javafx.scene.Scene.focusOwner(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
     template<javafx.scene.Node>("focusOwner", f, this, focusOwnerProperty()!! as ObservableValue<javafx.scene.Node>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.Scene.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.Scene.y(f: (() -> Double)? = null): Double =
-    template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.Scene.root(f: (() -> javafx.scene.Parent)? = null): javafx.scene.Parent =
-    template<javafx.scene.Parent>("root", f, this, rootProperty()!! as ObservableValue<javafx.scene.Parent>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.Scene.camera(f: (() -> javafx.scene.Camera)? = null): javafx.scene.Camera =
-    template<javafx.scene.Camera>("camera", f, this, cameraProperty()!! as ObservableValue<javafx.scene.Camera>)
-
 // javafx.scene.chart.XYChart
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <X, Y> javafx.scene.chart.XYChart<X, Y>.data(f: (() -> javafx.collections.ObservableList<javafx.scene.chart.XYChart.Series<X, Y>>)? = null): javafx.collections.ObservableList<javafx.scene.chart.XYChart.Series<X, Y>> =
+    template<javafx.collections.ObservableList<javafx.scene.chart.XYChart.Series<X, Y>>>("data", f, this, dataProperty()!! as ObservableValue<javafx.collections.ObservableList<javafx.scene.chart.XYChart.Series<X, Y>>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <X, Y> javafx.scene.chart.XYChart<X, Y>.verticalGridLinesVisible(f: (() -> Boolean)? = null): Boolean =
@@ -1658,10 +1662,6 @@ public fun <X, Y> javafx.scene.chart.XYChart<X, Y>.verticalZeroLineVisible(f: ((
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <X, Y> javafx.scene.chart.XYChart<X, Y>.horizontalZeroLineVisible(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("horizontalZeroLineVisible", f, this, horizontalZeroLineVisibleProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <X, Y> javafx.scene.chart.XYChart<X, Y>.data(f: (() -> javafx.collections.ObservableList<javafx.scene.chart.XYChart.Series<X, Y>>)? = null): javafx.collections.ObservableList<javafx.scene.chart.XYChart.Series<X, Y>> =
-    template<javafx.collections.ObservableList<javafx.scene.chart.XYChart.Series<X, Y>>>("data", f, this, dataProperty()!! as ObservableValue<javafx.collections.ObservableList<javafx.scene.chart.XYChart.Series<X, Y>>>)
 
 // javafx.beans.property.ListPropertyBase
 
@@ -1708,18 +1708,6 @@ public fun  javafx.scene.layout.BorderPane.right(f: (() -> javafx.scene.Node)? =
 // javafx.scene.effect.Lighting
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.Lighting.light(f: (() -> javafx.scene.effect.Light)? = null): javafx.scene.effect.Light =
-    template<javafx.scene.effect.Light>("light", f, this, lightProperty()!! as ObservableValue<javafx.scene.effect.Light>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.Lighting.bumpInput(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
-    template<javafx.scene.effect.Effect>("bumpInput", f, this, bumpInputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.Lighting.contentInput(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
-    template<javafx.scene.effect.Effect>("contentInput", f, this, contentInputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.Lighting.specularExponent(f: (() -> Double)? = null): Double =
     template<Double>("specularExponent", f, this, specularExponentProperty()!! as ObservableValue<Double>)
 
@@ -1735,6 +1723,18 @@ public fun  javafx.scene.effect.Lighting.specularConstant(f: (() -> Double)? = n
 public fun  javafx.scene.effect.Lighting.surfaceScale(f: (() -> Double)? = null): Double =
     template<Double>("surfaceScale", f, this, surfaceScaleProperty()!! as ObservableValue<Double>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.Lighting.light(f: (() -> javafx.scene.effect.Light)? = null): javafx.scene.effect.Light =
+    template<javafx.scene.effect.Light>("light", f, this, lightProperty()!! as ObservableValue<javafx.scene.effect.Light>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.Lighting.bumpInput(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
+    template<javafx.scene.effect.Effect>("bumpInput", f, this, bumpInputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.Lighting.contentInput(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
+    template<javafx.scene.effect.Effect>("contentInput", f, this, contentInputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
+
 // javafx.scene.control.IndexedCell
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -1742,6 +1742,10 @@ public fun <T> javafx.scene.control.IndexedCell<T>.index(f: (() -> Int)? = null)
     template<Int>("index", f, this, indexProperty()!! as ObservableValue<Int>)
 
 // javafx.animation.ScaleTransition
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.animation.ScaleTransition.duration(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
+    template<javafx.util.Duration>("duration", f, this, durationProperty()!! as ObservableValue<javafx.util.Duration>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.animation.ScaleTransition.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
@@ -1782,10 +1786,6 @@ public fun  javafx.animation.ScaleTransition.byY(f: (() -> Double)? = null): Dou
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.animation.ScaleTransition.byZ(f: (() -> Double)? = null): Double =
     template<Double>("byZ", f, this, byZProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.animation.ScaleTransition.duration(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
-    template<javafx.util.Duration>("duration", f, this, durationProperty()!! as ObservableValue<javafx.util.Duration>)
 
 // javafx.scene.text.TextFlow
 
@@ -1858,18 +1858,6 @@ public fun  javafx.scene.control.TextField.onAction(f: (() -> javafx.event.Event
 // javafx.scene.control.TableColumn
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S, T> javafx.scene.control.TableColumn<S, T>.cellValueFactory(f: (() -> javafx.util.Callback<javafx.scene.control.TableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>)? = null): javafx.util.Callback<javafx.scene.control.TableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>> =
-    template<javafx.util.Callback<javafx.scene.control.TableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>>("cellValueFactory", f, this, cellValueFactoryProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S, T> javafx.scene.control.TableColumn<S, T>.sortType(f: (() -> javafx.scene.control.TableColumn.SortType)? = null): javafx.scene.control.TableColumn.SortType =
-    template<javafx.scene.control.TableColumn.SortType>("sortType", f, this, sortTypeProperty()!! as ObservableValue<javafx.scene.control.TableColumn.SortType>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S, T> javafx.scene.control.TableColumn<S, T>.tableView(f: (() -> javafx.scene.control.TableView<S>)? = null): javafx.scene.control.TableView<S> =
-    template<javafx.scene.control.TableView<S>>("tableView", f, this, tableViewProperty()!! as ObservableValue<javafx.scene.control.TableView<S>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <S, T> javafx.scene.control.TableColumn<S, T>.cellFactory(f: (() -> javafx.util.Callback<javafx.scene.control.TableColumn<S, T>, javafx.scene.control.TableCell<S, T>>)? = null): javafx.util.Callback<javafx.scene.control.TableColumn<S, T>, javafx.scene.control.TableCell<S, T>> =
     template<javafx.util.Callback<javafx.scene.control.TableColumn<S, T>, javafx.scene.control.TableCell<S, T>>>("cellFactory", f, this, cellFactoryProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TableColumn<S, T>, javafx.scene.control.TableCell<S, T>>>)
 
@@ -1885,6 +1873,18 @@ public fun <S, T> javafx.scene.control.TableColumn<S, T>.onEditCommit(f: (() -> 
 public fun <S, T> javafx.scene.control.TableColumn<S, T>.onEditCancel(f: (() -> javafx.event.EventHandler<javafx.scene.control.TableColumn.CellEditEvent<S, T>>)? = null): javafx.event.EventHandler<javafx.scene.control.TableColumn.CellEditEvent<S, T>> =
     template<javafx.event.EventHandler<javafx.scene.control.TableColumn.CellEditEvent<S, T>>>("onEditCancel", f, this, onEditCancelProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.TableColumn.CellEditEvent<S, T>>>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S, T> javafx.scene.control.TableColumn<S, T>.cellValueFactory(f: (() -> javafx.util.Callback<javafx.scene.control.TableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>)? = null): javafx.util.Callback<javafx.scene.control.TableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>> =
+    template<javafx.util.Callback<javafx.scene.control.TableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>>("cellValueFactory", f, this, cellValueFactoryProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S, T> javafx.scene.control.TableColumn<S, T>.sortType(f: (() -> javafx.scene.control.TableColumn.SortType)? = null): javafx.scene.control.TableColumn.SortType =
+    template<javafx.scene.control.TableColumn.SortType>("sortType", f, this, sortTypeProperty()!! as ObservableValue<javafx.scene.control.TableColumn.SortType>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S, T> javafx.scene.control.TableColumn<S, T>.tableView(f: (() -> javafx.scene.control.TableView<S>)? = null): javafx.scene.control.TableView<S> =
+    template<javafx.scene.control.TableView<S>>("tableView", f, this, tableViewProperty()!! as ObservableValue<javafx.scene.control.TableView<S>>)
+
 // javafx.scene.control.ToggleGroup
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -1892,6 +1892,10 @@ public fun  javafx.scene.control.ToggleGroup.selectedToggle(f: (() -> javafx.sce
     template<javafx.scene.control.Toggle>("selectedToggle", f, this, selectedToggleProperty()!! as ObservableValue<javafx.scene.control.Toggle>)
 
 // javafx.scene.layout.TilePane
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.layout.TilePane.orientation(f: (() -> javafx.geometry.Orientation)? = null): javafx.geometry.Orientation =
+    template<javafx.geometry.Orientation>("orientation", f, this, orientationProperty()!! as ObservableValue<javafx.geometry.Orientation>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.layout.TilePane.tileAlignment(f: (() -> javafx.geometry.Pos)? = null): javafx.geometry.Pos =
@@ -1933,15 +1937,7 @@ public fun  javafx.scene.layout.TilePane.prefTileWidth(f: (() -> Double)? = null
 public fun  javafx.scene.layout.TilePane.prefColumns(f: (() -> Int)? = null): Int =
     template<Int>("prefColumns", f, this, prefColumnsProperty()!! as ObservableValue<Int>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.layout.TilePane.orientation(f: (() -> javafx.geometry.Orientation)? = null): javafx.geometry.Orientation =
-    template<javafx.geometry.Orientation>("orientation", f, this, orientationProperty()!! as ObservableValue<javafx.geometry.Orientation>)
-
 // javafx.scene.chart.XYChart.Data
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <X, Y> javafx.scene.chart.XYChart.Data<X, Y>.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
-    template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <X, Y> javafx.scene.chart.XYChart.Data<X, Y>.XValue(f: (() -> X)? = null): X =
@@ -1954,6 +1950,10 @@ public fun <X, Y> javafx.scene.chart.XYChart.Data<X, Y>.YValue(f: (() -> Y)? = n
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <X, Y> javafx.scene.chart.XYChart.Data<X, Y>.extraValue(f: (() -> Any)? = null): Any =
     template<Any>("extraValue", f, this, extraValueProperty()!! as ObservableValue<Any>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <X, Y> javafx.scene.chart.XYChart.Data<X, Y>.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
+    template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
 
 // javafx.scene.media.EqualizerBand
 
@@ -1976,6 +1976,10 @@ public fun  javafx.scene.control.TitledPane.expanded(f: (() -> Boolean)? = null)
     template<Boolean>("expanded", f, this, expandedProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.TitledPane.collapsible(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("collapsible", f, this, collapsibleProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.TitledPane.content(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
     template<javafx.scene.Node>("content", f, this, contentProperty()!! as ObservableValue<javafx.scene.Node>)
 
@@ -1983,11 +1987,11 @@ public fun  javafx.scene.control.TitledPane.content(f: (() -> javafx.scene.Node)
 public fun  javafx.scene.control.TitledPane.animated(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("animated", f, this, animatedProperty()!! as ObservableValue<Boolean>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.TitledPane.collapsible(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("collapsible", f, this, collapsibleProperty()!! as ObservableValue<Boolean>)
-
 // javafx.scene.control.Cell
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.Cell<T>.empty(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("empty", f, this, emptyProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.Cell<T>.item(f: (() -> T)? = null): T =
@@ -2004,10 +2008,6 @@ public fun <T> javafx.scene.control.Cell<T>.editing(f: (() -> Boolean)? = null):
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.Cell<T>.editable(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("editable", f, this, editableProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.Cell<T>.empty(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("empty", f, this, emptyProperty()!! as ObservableValue<Boolean>)
 
 // javafx.scene.layout.Region
 
@@ -2120,12 +2120,12 @@ public fun  javafx.scene.control.CustomMenuItem.hideOnClick(f: (() -> Boolean)? 
 // javafx.scene.effect.SepiaTone
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.SepiaTone.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
-    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.SepiaTone.level(f: (() -> Double)? = null): Double =
     template<Double>("level", f, this, levelProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.SepiaTone.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
+    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
 
 // javafx.scene.Group
 
@@ -2162,16 +2162,16 @@ public fun  javafx.scene.canvas.Canvas.height(f: (() -> Double)? = null): Double
 // javafx.scene.control.CheckBoxTreeItem
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.CheckBoxTreeItem<T>.independent(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("independent", f, this, independentProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.CheckBoxTreeItem<T>.selected(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("selected", f, this, selectedProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.CheckBoxTreeItem<T>.indeterminate(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("indeterminate", f, this, indeterminateProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.CheckBoxTreeItem<T>.independent(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("independent", f, this, independentProperty()!! as ObservableValue<Boolean>)
 
 // javafx.scene.chart.NumberAxis
 
@@ -2192,18 +2192,6 @@ public fun  javafx.scene.Parent.needsLayout(f: (() -> Boolean)? = null): Boolean
 // javafx.scene.control.TreeTableColumn
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S, T> javafx.scene.control.TreeTableColumn<S, T>.treeTableView(f: (() -> javafx.scene.control.TreeTableView<S>)? = null): javafx.scene.control.TreeTableView<S> =
-    template<javafx.scene.control.TreeTableView<S>>("treeTableView", f, this, treeTableViewProperty()!! as ObservableValue<javafx.scene.control.TreeTableView<S>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S, T> javafx.scene.control.TreeTableColumn<S, T>.cellValueFactory(f: (() -> javafx.util.Callback<javafx.scene.control.TreeTableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>)? = null): javafx.util.Callback<javafx.scene.control.TreeTableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>> =
-    template<javafx.util.Callback<javafx.scene.control.TreeTableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>>("cellValueFactory", f, this, cellValueFactoryProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TreeTableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S, T> javafx.scene.control.TreeTableColumn<S, T>.sortType(f: (() -> javafx.scene.control.TreeTableColumn.SortType)? = null): javafx.scene.control.TreeTableColumn.SortType =
-    template<javafx.scene.control.TreeTableColumn.SortType>("sortType", f, this, sortTypeProperty()!! as ObservableValue<javafx.scene.control.TreeTableColumn.SortType>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <S, T> javafx.scene.control.TreeTableColumn<S, T>.cellFactory(f: (() -> javafx.util.Callback<javafx.scene.control.TreeTableColumn<S, T>, javafx.scene.control.TreeTableCell<S, T>>)? = null): javafx.util.Callback<javafx.scene.control.TreeTableColumn<S, T>, javafx.scene.control.TreeTableCell<S, T>> =
     template<javafx.util.Callback<javafx.scene.control.TreeTableColumn<S, T>, javafx.scene.control.TreeTableCell<S, T>>>("cellFactory", f, this, cellFactoryProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TreeTableColumn<S, T>, javafx.scene.control.TreeTableCell<S, T>>>)
 
@@ -2219,11 +2207,27 @@ public fun <S, T> javafx.scene.control.TreeTableColumn<S, T>.onEditCommit(f: (()
 public fun <S, T> javafx.scene.control.TreeTableColumn<S, T>.onEditCancel(f: (() -> javafx.event.EventHandler<javafx.scene.control.TreeTableColumn.CellEditEvent<S, T>>)? = null): javafx.event.EventHandler<javafx.scene.control.TreeTableColumn.CellEditEvent<S, T>> =
     template<javafx.event.EventHandler<javafx.scene.control.TreeTableColumn.CellEditEvent<S, T>>>("onEditCancel", f, this, onEditCancelProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.TreeTableColumn.CellEditEvent<S, T>>>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S, T> javafx.scene.control.TreeTableColumn<S, T>.treeTableView(f: (() -> javafx.scene.control.TreeTableView<S>)? = null): javafx.scene.control.TreeTableView<S> =
+    template<javafx.scene.control.TreeTableView<S>>("treeTableView", f, this, treeTableViewProperty()!! as ObservableValue<javafx.scene.control.TreeTableView<S>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S, T> javafx.scene.control.TreeTableColumn<S, T>.cellValueFactory(f: (() -> javafx.util.Callback<javafx.scene.control.TreeTableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>)? = null): javafx.util.Callback<javafx.scene.control.TreeTableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>> =
+    template<javafx.util.Callback<javafx.scene.control.TreeTableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>>("cellValueFactory", f, this, cellValueFactoryProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TreeTableColumn.CellDataFeatures<S, T>, javafx.beans.value.ObservableValue<T>>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S, T> javafx.scene.control.TreeTableColumn<S, T>.sortType(f: (() -> javafx.scene.control.TreeTableColumn.SortType)? = null): javafx.scene.control.TreeTableColumn.SortType =
+    template<javafx.scene.control.TreeTableColumn.SortType>("sortType", f, this, sortTypeProperty()!! as ObservableValue<javafx.scene.control.TreeTableColumn.SortType>)
+
 // javafx.scene.effect.Blend
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.Blend.opacity(f: (() -> Double)? = null): Double =
     template<Double>("opacity", f, this, opacityProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.Blend.mode(f: (() -> javafx.scene.effect.BlendMode)? = null): javafx.scene.effect.BlendMode =
+    template<javafx.scene.effect.BlendMode>("mode", f, this, modeProperty()!! as ObservableValue<javafx.scene.effect.BlendMode>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.Blend.bottomInput(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
@@ -2232,10 +2236,6 @@ public fun  javafx.scene.effect.Blend.bottomInput(f: (() -> javafx.scene.effect.
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.Blend.topInput(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
     template<javafx.scene.effect.Effect>("topInput", f, this, topInputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.Blend.mode(f: (() -> javafx.scene.effect.BlendMode)? = null): javafx.scene.effect.BlendMode =
-    template<javafx.scene.effect.BlendMode>("mode", f, this, modeProperty()!! as ObservableValue<javafx.scene.effect.BlendMode>)
 
 // javafx.scene.effect.DropShadow
 
@@ -2282,26 +2282,30 @@ public fun  javafx.scene.shape.CubicCurveTo.controlY2(f: (() -> Double)? = null)
     template<Double>("controlY2", f, this, controlY2Property()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.CubicCurveTo.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.CubicCurveTo.controlX2(f: (() -> Double)? = null): Double =
     template<Double>("controlX2", f, this, controlX2Property()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.CubicCurveTo.controlX1(f: (() -> Double)? = null): Double =
+    template<Double>("controlX1", f, this, controlX1Property()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.CubicCurveTo.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.CubicCurveTo.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.CubicCurveTo.controlY1(f: (() -> Double)? = null): Double =
     template<Double>("controlY1", f, this, controlY1Property()!! as ObservableValue<Double>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.CubicCurveTo.controlX1(f: (() -> Double)? = null): Double =
-    template<Double>("controlX1", f, this, controlX1Property()!! as ObservableValue<Double>)
-
 // javafx.scene.control.ComboBoxBase
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.ComboBoxBase<T>.promptText(f: (() -> String)? = null): String =
+    template<String>("promptText", f, this, promptTextProperty()!! as ObservableValue<String>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.ComboBoxBase<T>.editable(f: (() -> Boolean)? = null): Boolean =
@@ -2312,16 +2316,12 @@ public fun <T> javafx.scene.control.ComboBoxBase<T>.value(f: (() -> T)? = null):
     template<T>("value", f, this, valueProperty()!! as ObservableValue<T>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ComboBoxBase<T>.promptText(f: (() -> String)? = null): String =
-    template<String>("promptText", f, this, promptTextProperty()!! as ObservableValue<String>)
+public fun <T> javafx.scene.control.ComboBoxBase<T>.onAction(f: (() -> javafx.event.EventHandler<javafx.event.ActionEvent>)? = null): javafx.event.EventHandler<javafx.event.ActionEvent> =
+    template<javafx.event.EventHandler<javafx.event.ActionEvent>>("onAction", f, this, onActionProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.event.ActionEvent>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.ComboBoxBase<T>.armed(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("armed", f, this, armedProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ComboBoxBase<T>.onAction(f: (() -> javafx.event.EventHandler<javafx.event.ActionEvent>)? = null): javafx.event.EventHandler<javafx.event.ActionEvent> =
-    template<javafx.event.EventHandler<javafx.event.ActionEvent>>("onAction", f, this, onActionProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.event.ActionEvent>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.ComboBoxBase<T>.showing(f: (() -> Boolean)? = null): Boolean =
@@ -2422,12 +2422,12 @@ public fun  javafx.stage.Window.height(f: (() -> Double)? = null): Double =
     template<Double>("height", f, this, heightProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.stage.Window.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.stage.Window.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.stage.Window.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.stage.Window.showing(f: (() -> Boolean)? = null): Boolean =
@@ -2462,12 +2462,12 @@ public fun <T> javafx.scene.control.cell.TextFieldTreeCell<T>.converter(f: (() -
 // javafx.scene.control.TextArea
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.TextArea.wrapText(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("wrapText", f, this, wrapTextProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.TextArea.prefColumnCount(f: (() -> Int)? = null): Int =
     template<Int>("prefColumnCount", f, this, prefColumnCountProperty()!! as ObservableValue<Int>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.TextArea.wrapText(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("wrapText", f, this, wrapTextProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.TextArea.prefRowCount(f: (() -> Int)? = null): Int =
@@ -2482,6 +2482,10 @@ public fun  javafx.scene.control.TextArea.scrollLeft(f: (() -> Double)? = null):
     template<Double>("scrollLeft", f, this, scrollLeftProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.control.Tooltip
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.Tooltip.activated(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("activated", f, this, activatedProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.Tooltip.text(f: (() -> String)? = null): String =
@@ -2514,10 +2518,6 @@ public fun  javafx.scene.control.Tooltip.contentDisplay(f: (() -> javafx.scene.c
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.Tooltip.graphicTextGap(f: (() -> Double)? = null): Double =
     template<Double>("graphicTextGap", f, this, graphicTextGapProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.Tooltip.activated(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("activated", f, this, activatedProperty()!! as ObservableValue<Boolean>)
 
 // javafx.scene.control.cell.TextFieldListCell
 
@@ -2552,16 +2552,16 @@ public fun  javafx.scene.effect.DisplacementMap.scaleY(f: (() -> Double)? = null
     template<Double>("scaleY", f, this, scaleYProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.DisplacementMap.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
-    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.DisplacementMap.wrap(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("wrap", f, this, wrapProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.DisplacementMap.mapData(f: (() -> javafx.scene.effect.FloatMap)? = null): javafx.scene.effect.FloatMap =
     template<javafx.scene.effect.FloatMap>("mapData", f, this, mapDataProperty()!! as ObservableValue<javafx.scene.effect.FloatMap>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.DisplacementMap.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
+    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.DisplacementMap.offsetX(f: (() -> Double)? = null): Double =
@@ -2572,10 +2572,6 @@ public fun  javafx.scene.effect.DisplacementMap.offsetY(f: (() -> Double)? = nul
     template<Double>("offsetY", f, this, offsetYProperty()!! as ObservableValue<Double>)
 
 // javafx.animation.RotateTransition
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.animation.RotateTransition.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
-    template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.animation.RotateTransition.fromAngle(f: (() -> Double)? = null): Double =
@@ -2597,6 +2593,10 @@ public fun  javafx.animation.RotateTransition.duration(f: (() -> javafx.util.Dur
 public fun  javafx.animation.RotateTransition.axis(f: (() -> javafx.geometry.Point3D)? = null): javafx.geometry.Point3D =
     template<javafx.geometry.Point3D>("axis", f, this, axisProperty()!! as ObservableValue<javafx.geometry.Point3D>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.animation.RotateTransition.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
+    template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
+
 // javafx.scene.shape.Sphere
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -2612,12 +2612,12 @@ public fun <S, T> javafx.scene.control.cell.ChoiceBoxTableCell<S, T>.converter(f
 // javafx.scene.effect.Glow
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.Glow.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
-    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.Glow.level(f: (() -> Double)? = null): Double =
     template<Double>("level", f, this, levelProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.Glow.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
+    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
 
 // javafx.beans.property.SetPropertyBase
 
@@ -2632,8 +2632,24 @@ public fun <E> javafx.beans.property.SetPropertyBase<E>.size(f: (() -> Int)? = n
 // javafx.scene.control.ScrollPane
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.ScrollPane.vbarPolicy(f: (() -> javafx.scene.control.ScrollPane.ScrollBarPolicy)? = null): javafx.scene.control.ScrollPane.ScrollBarPolicy =
+    template<javafx.scene.control.ScrollPane.ScrollBarPolicy>("vbarPolicy", f, this, vbarPolicyProperty()!! as ObservableValue<javafx.scene.control.ScrollPane.ScrollBarPolicy>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.ScrollPane.hbarPolicy(f: (() -> javafx.scene.control.ScrollPane.ScrollBarPolicy)? = null): javafx.scene.control.ScrollPane.ScrollBarPolicy =
     template<javafx.scene.control.ScrollPane.ScrollBarPolicy>("hbarPolicy", f, this, hbarPolicyProperty()!! as ObservableValue<javafx.scene.control.ScrollPane.ScrollBarPolicy>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.ScrollPane.fitToHeight(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("fitToHeight", f, this, fitToHeightProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.ScrollPane.pannable(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("pannable", f, this, pannableProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.ScrollPane.fitToWidth(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("fitToWidth", f, this, fitToWidthProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.ScrollPane.hvalue(f: (() -> Double)? = null): Double =
@@ -2675,22 +2691,6 @@ public fun  javafx.scene.control.ScrollPane.viewportBounds(f: (() -> javafx.geom
 public fun  javafx.scene.control.ScrollPane.content(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
     template<javafx.scene.Node>("content", f, this, contentProperty()!! as ObservableValue<javafx.scene.Node>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.ScrollPane.fitToHeight(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("fitToHeight", f, this, fitToHeightProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.ScrollPane.pannable(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("pannable", f, this, pannableProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.ScrollPane.fitToWidth(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("fitToWidth", f, this, fitToWidthProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.ScrollPane.vbarPolicy(f: (() -> javafx.scene.control.ScrollPane.ScrollBarPolicy)? = null): javafx.scene.control.ScrollPane.ScrollBarPolicy =
-    template<javafx.scene.control.ScrollPane.ScrollBarPolicy>("vbarPolicy", f, this, vbarPolicyProperty()!! as ObservableValue<javafx.scene.control.ScrollPane.ScrollBarPolicy>)
-
 // javafx.scene.effect.InnerShadow
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -2706,12 +2706,12 @@ public fun  javafx.scene.effect.InnerShadow.color(f: (() -> javafx.scene.paint.C
     template<javafx.scene.paint.Color>("color", f, this, colorProperty()!! as ObservableValue<javafx.scene.paint.Color>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.InnerShadow.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
-    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.InnerShadow.choke(f: (() -> Double)? = null): Double =
     template<Double>("choke", f, this, chokeProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.InnerShadow.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
+    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.InnerShadow.radius(f: (() -> Double)? = null): Double =
@@ -2842,10 +2842,6 @@ public fun  javafx.scene.control.MenuItem.accelerator(f: (() -> javafx.scene.inp
 // javafx.scene.control.Pagination
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.Pagination.maxPageIndicatorCount(f: (() -> Int)? = null): Int =
-    template<Int>("maxPageIndicatorCount", f, this, maxPageIndicatorCountProperty()!! as ObservableValue<Int>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.Pagination.pageCount(f: (() -> Int)? = null): Int =
     template<Int>("pageCount", f, this, pageCountProperty()!! as ObservableValue<Int>)
 
@@ -2856,6 +2852,10 @@ public fun  javafx.scene.control.Pagination.currentPageIndex(f: (() -> Int)? = n
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.Pagination.pageFactory(f: (() -> javafx.util.Callback<Int, javafx.scene.Node>)? = null): javafx.util.Callback<Int, javafx.scene.Node> =
     template<javafx.util.Callback<Int, javafx.scene.Node>>("pageFactory", f, this, pageFactoryProperty()!! as ObservableValue<javafx.util.Callback<Int, javafx.scene.Node>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.Pagination.maxPageIndicatorCount(f: (() -> Int)? = null): Int =
+    template<Int>("maxPageIndicatorCount", f, this, maxPageIndicatorCountProperty()!! as ObservableValue<Int>)
 
 // javafx.scene.media.AudioEqualizer
 
@@ -2908,20 +2908,20 @@ public fun <T> javafx.scene.control.TreeTableRow<T>.disclosureNode(f: (() -> jav
 // javafx.animation.PathTransition
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.animation.PathTransition.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
-    template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.animation.PathTransition.path(f: (() -> javafx.scene.shape.Shape)? = null): javafx.scene.shape.Shape =
-    template<javafx.scene.shape.Shape>("path", f, this, pathProperty()!! as ObservableValue<javafx.scene.shape.Shape>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.animation.PathTransition.orientation(f: (() -> javafx.animation.PathTransition.OrientationType)? = null): javafx.animation.PathTransition.OrientationType =
     template<javafx.animation.PathTransition.OrientationType>("orientation", f, this, orientationProperty()!! as ObservableValue<javafx.animation.PathTransition.OrientationType>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.animation.PathTransition.duration(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
     template<javafx.util.Duration>("duration", f, this, durationProperty()!! as ObservableValue<javafx.util.Duration>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.animation.PathTransition.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
+    template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.animation.PathTransition.path(f: (() -> javafx.scene.shape.Shape)? = null): javafx.scene.shape.Shape =
+    template<javafx.scene.shape.Shape>("path", f, this, pathProperty()!! as ObservableValue<javafx.scene.shape.Shape>)
 
 // javafx.scene.shape.Path
 
@@ -2932,12 +2932,16 @@ public fun  javafx.scene.shape.Path.fillRule(f: (() -> javafx.scene.shape.FillRu
 // javafx.scene.transform.Scale
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.transform.Scale.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.transform.Scale.z(f: (() -> Double)? = null): Double =
+    template<Double>("z", f, this, zProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.transform.Scale.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.transform.Scale.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.transform.Scale.pivotX(f: (() -> Double)? = null): Double =
@@ -2950,10 +2954,6 @@ public fun  javafx.scene.transform.Scale.pivotY(f: (() -> Double)? = null): Doub
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.transform.Scale.pivotZ(f: (() -> Double)? = null): Double =
     template<Double>("pivotZ", f, this, pivotZProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.transform.Scale.z(f: (() -> Double)? = null): Double =
-    template<Double>("z", f, this, zProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.control.cell.TreeItemPropertyValueFactory
 
@@ -3076,14 +3076,6 @@ public fun  javafx.scene.control.ContextMenu.onAction(f: (() -> javafx.event.Eve
 // javafx.scene.shape.Arc
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.Arc.typ(f: (() -> javafx.scene.shape.ArcType)? = null): javafx.scene.shape.ArcType =
-    template<javafx.scene.shape.ArcType>("typ", f, this, typeProperty()!! as ObservableValue<javafx.scene.shape.ArcType>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.Arc.length(f: (() -> Double)? = null): Double =
-    template<Double>("length", f, this, lengthProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.Arc.centerX(f: (() -> Double)? = null): Double =
     template<Double>("centerX", f, this, centerXProperty()!! as ObservableValue<Double>)
 
@@ -3103,6 +3095,14 @@ public fun  javafx.scene.shape.Arc.radiusY(f: (() -> Double)? = null): Double =
 public fun  javafx.scene.shape.Arc.startAngle(f: (() -> Double)? = null): Double =
     template<Double>("startAngle", f, this, startAngleProperty()!! as ObservableValue<Double>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.Arc.length(f: (() -> Double)? = null): Double =
+    template<Double>("length", f, this, lengthProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.Arc.typ(f: (() -> javafx.scene.shape.ArcType)? = null): javafx.scene.shape.ArcType =
+    template<javafx.scene.shape.ArcType>("typ", f, this, typeProperty()!! as ObservableValue<javafx.scene.shape.ArcType>)
+
 // javafx.scene.shape.Circle
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -3120,18 +3120,26 @@ public fun  javafx.scene.shape.Circle.radius(f: (() -> Double)? = null): Double 
 // javafx.scene.transform.Translate
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.transform.Translate.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.transform.Translate.z(f: (() -> Double)? = null): Double =
+    template<Double>("z", f, this, zProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.transform.Translate.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.transform.Translate.z(f: (() -> Double)? = null): Double =
-    template<Double>("z", f, this, zProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.transform.Translate.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.shape.Line
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.Line.endX(f: (() -> Double)? = null): Double =
+    template<Double>("endX", f, this, endXProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.Line.endY(f: (() -> Double)? = null): Double =
+    template<Double>("endY", f, this, endYProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.Line.startY(f: (() -> Double)? = null): Double =
@@ -3141,23 +3149,7 @@ public fun  javafx.scene.shape.Line.startY(f: (() -> Double)? = null): Double =
 public fun  javafx.scene.shape.Line.startX(f: (() -> Double)? = null): Double =
     template<Double>("startX", f, this, startXProperty()!! as ObservableValue<Double>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.Line.endY(f: (() -> Double)? = null): Double =
-    template<Double>("endY", f, this, endYProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.Line.endX(f: (() -> Double)? = null): Double =
-    template<Double>("endX", f, this, endXProperty()!! as ObservableValue<Double>)
-
 // javafx.scene.control.ListView
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ListView<T>.editable(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("editable", f, this, editableProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ListView<T>.onScrollTo(f: (() -> javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>)? = null): javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>> =
-    template<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>("onScrollTo", f, this, onScrollToProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.ListView<T>.orientation(f: (() -> javafx.geometry.Orientation)? = null): javafx.geometry.Orientation =
@@ -3168,8 +3160,8 @@ public fun <T> javafx.scene.control.ListView<T>.items(f: (() -> javafx.collectio
     template<javafx.collections.ObservableList<T>>("items", f, this, itemsProperty()!! as ObservableValue<javafx.collections.ObservableList<T>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ListView<T>.fixedCellSize(f: (() -> Double)? = null): Double =
-    template<Double>("fixedCellSize", f, this, fixedCellSizeProperty()!! as ObservableValue<Double>)
+public fun <T> javafx.scene.control.ListView<T>.onScrollTo(f: (() -> javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>)? = null): javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>> =
+    template<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>("onScrollTo", f, this, onScrollToProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.ListView<T>.selectionModel(f: (() -> javafx.scene.control.MultipleSelectionModel<T>)? = null): javafx.scene.control.MultipleSelectionModel<T> =
@@ -3203,6 +3195,14 @@ public fun <T> javafx.scene.control.ListView<T>.onEditCommit(f: (() -> javafx.ev
 public fun <T> javafx.scene.control.ListView<T>.onEditCancel(f: (() -> javafx.event.EventHandler<javafx.scene.control.ListView.EditEvent<T>>)? = null): javafx.event.EventHandler<javafx.scene.control.ListView.EditEvent<T>> =
     template<javafx.event.EventHandler<javafx.scene.control.ListView.EditEvent<T>>>("onEditCancel", f, this, onEditCancelProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.ListView.EditEvent<T>>>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.ListView<T>.editable(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("editable", f, this, editableProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.ListView<T>.fixedCellSize(f: (() -> Double)? = null): Double =
+    template<Double>("fixedCellSize", f, this, fixedCellSizeProperty()!! as ObservableValue<Double>)
+
 // javafx.beans.binding.SetExpression
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -3216,10 +3216,6 @@ public fun <E> javafx.beans.binding.SetExpression<E>.size(f: (() -> Int)? = null
 // javafx.scene.layout.HBox
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.layout.HBox.fillHeight(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("fillHeight", f, this, fillHeightProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.layout.HBox.alignment(f: (() -> javafx.geometry.Pos)? = null): javafx.geometry.Pos =
     template<javafx.geometry.Pos>("alignment", f, this, alignmentProperty()!! as ObservableValue<javafx.geometry.Pos>)
 
@@ -3227,13 +3223,13 @@ public fun  javafx.scene.layout.HBox.alignment(f: (() -> javafx.geometry.Pos)? =
 public fun  javafx.scene.layout.HBox.spacing(f: (() -> Double)? = null): Double =
     template<Double>("spacing", f, this, spacingProperty()!! as ObservableValue<Double>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.layout.HBox.fillHeight(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("fillHeight", f, this, fillHeightProperty()!! as ObservableValue<Boolean>)
+
 // javafx.beans.property.ReadOnlyMapWrapper
 
 // javafx.scene.chart.PieChart.Data
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.chart.PieChart.Data.pieValue(f: (() -> Double)? = null): Double =
-    template<Double>("pieValue", f, this, pieValueProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.chart.PieChart.Data.chart(f: (() -> javafx.scene.chart.PieChart)? = null): javafx.scene.chart.PieChart =
@@ -3242,6 +3238,10 @@ public fun  javafx.scene.chart.PieChart.Data.chart(f: (() -> javafx.scene.chart.
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.chart.PieChart.Data.name(f: (() -> String)? = null): String =
     template<String>("name", f, this, nameProperty()!! as ObservableValue<String>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.chart.PieChart.Data.pieValue(f: (() -> Double)? = null): Double =
+    template<Double>("pieValue", f, this, pieValueProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.control.ListCell
 
@@ -3296,28 +3296,28 @@ public fun  javafx.scene.transform.Transform.onTransformChanged(f: (() -> javafx
 // javafx.scene.shape.QuadCurve
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.QuadCurve.startY(f: (() -> Double)? = null): Double =
-    template<Double>("startY", f, this, startYProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.QuadCurve.startX(f: (() -> Double)? = null): Double =
-    template<Double>("startX", f, this, startXProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.QuadCurve.endY(f: (() -> Double)? = null): Double =
-    template<Double>("endY", f, this, endYProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.QuadCurve.endX(f: (() -> Double)? = null): Double =
-    template<Double>("endX", f, this, endXProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.QuadCurve.controlX(f: (() -> Double)? = null): Double =
     template<Double>("controlX", f, this, controlXProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.QuadCurve.controlY(f: (() -> Double)? = null): Double =
     template<Double>("controlY", f, this, controlYProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.QuadCurve.endX(f: (() -> Double)? = null): Double =
+    template<Double>("endX", f, this, endXProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.QuadCurve.endY(f: (() -> Double)? = null): Double =
+    template<Double>("endY", f, this, endYProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.QuadCurve.startY(f: (() -> Double)? = null): Double =
+    template<Double>("startY", f, this, startYProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.QuadCurve.startX(f: (() -> Double)? = null): Double =
+    template<Double>("startX", f, this, startXProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.control.cell.ComboBoxListCell
 
@@ -3338,26 +3338,26 @@ public fun <T> javafx.scene.control.TableRow<T>.tableView(f: (() -> javafx.scene
 // javafx.scene.effect.Light.Point
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.Light.Point.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.effect.Light.Point.z(f: (() -> Double)? = null): Double =
+    template<Double>("z", f, this, zProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.Light.Point.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.Light.Point.z(f: (() -> Double)? = null): Double =
-    template<Double>("z", f, this, zProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.effect.Light.Point.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.web.WebHistory.Entry
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.web.WebHistory.Entry.title(f: (() -> String)? = null): String =
-    template<String>("title", f, this, titleProperty()!! as ObservableValue<String>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.web.WebHistory.Entry.lastVisitedDate(f: (() -> java.util.Date)? = null): java.util.Date =
     template<java.util.Date>("lastVisitedDate", f, this, lastVisitedDateProperty()!! as ObservableValue<java.util.Date>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.web.WebHistory.Entry.title(f: (() -> String)? = null): String =
+    template<String>("title", f, this, titleProperty()!! as ObservableValue<String>)
 
 // javafx.scene.shape.Shape
 
@@ -3438,6 +3438,10 @@ public fun  javafx.stage.DirectoryChooser.initialDirectory(f: (() -> java.io.Fil
 // javafx.animation.TranslateTransition
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.animation.TranslateTransition.duration(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
+    template<javafx.util.Duration>("duration", f, this, durationProperty()!! as ObservableValue<javafx.util.Duration>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.animation.TranslateTransition.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
     template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
 
@@ -3477,10 +3481,6 @@ public fun  javafx.animation.TranslateTransition.byY(f: (() -> Double)? = null):
 public fun  javafx.animation.TranslateTransition.byZ(f: (() -> Double)? = null): Double =
     template<Double>("byZ", f, this, byZProperty()!! as ObservableValue<Double>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.animation.TranslateTransition.duration(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
-    template<javafx.util.Duration>("duration", f, this, durationProperty()!! as ObservableValue<javafx.util.Duration>)
-
 // javafx.scene.effect.ColorAdjust
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -3506,8 +3506,16 @@ public fun  javafx.scene.effect.ColorAdjust.contrast(f: (() -> Double)? = null):
 // javafx.scene.control.ScrollBar
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.ScrollBar.value(f: (() -> Double)? = null): Double =
-    template<Double>("value", f, this, valueProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.control.ScrollBar.orientation(f: (() -> javafx.geometry.Orientation)? = null): javafx.geometry.Orientation =
+    template<javafx.geometry.Orientation>("orientation", f, this, orientationProperty()!! as ObservableValue<javafx.geometry.Orientation>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.ScrollBar.unitIncrement(f: (() -> Double)? = null): Double =
+    template<Double>("unitIncrement", f, this, unitIncrementProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.ScrollBar.blockIncrement(f: (() -> Double)? = null): Double =
+    template<Double>("blockIncrement", f, this, blockIncrementProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.ScrollBar.min(f: (() -> Double)? = null): Double =
@@ -3522,16 +3530,8 @@ public fun  javafx.scene.control.ScrollBar.visibleAmount(f: (() -> Double)? = nu
     template<Double>("visibleAmount", f, this, visibleAmountProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.ScrollBar.orientation(f: (() -> javafx.geometry.Orientation)? = null): javafx.geometry.Orientation =
-    template<javafx.geometry.Orientation>("orientation", f, this, orientationProperty()!! as ObservableValue<javafx.geometry.Orientation>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.ScrollBar.unitIncrement(f: (() -> Double)? = null): Double =
-    template<Double>("unitIncrement", f, this, unitIncrementProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.ScrollBar.blockIncrement(f: (() -> Double)? = null): Double =
-    template<Double>("blockIncrement", f, this, blockIncrementProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.control.ScrollBar.value(f: (() -> Double)? = null): Double =
+    template<Double>("value", f, this, valueProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.media.Media
 
@@ -3548,14 +3548,30 @@ public fun  javafx.scene.media.Media.height(f: (() -> Int)? = null): Int =
     template<Int>("height", f, this, heightProperty()!! as ObservableValue<Int>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.Media.error(f: (() -> javafx.scene.media.MediaException)? = null): javafx.scene.media.MediaException =
-    template<javafx.scene.media.MediaException>("error", f, this, errorProperty()!! as ObservableValue<javafx.scene.media.MediaException>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.media.Media.duration(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
     template<javafx.util.Duration>("duration", f, this, durationProperty()!! as ObservableValue<javafx.util.Duration>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.media.Media.error(f: (() -> javafx.scene.media.MediaException)? = null): javafx.scene.media.MediaException =
+    template<javafx.scene.media.MediaException>("error", f, this, errorProperty()!! as ObservableValue<javafx.scene.media.MediaException>)
+
 // javafx.scene.web.WebView
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.web.WebView.fontScale(f: (() -> Double)? = null): Double =
+    template<Double>("fontScale", f, this, fontScaleProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.web.WebView.zoom(f: (() -> Double)? = null): Double =
+    template<Double>("zoom", f, this, zoomProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.web.WebView.contextMenuEnabled(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("contextMenuEnabled", f, this, contextMenuEnabledProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.web.WebView.fontSmoothingType(f: (() -> javafx.scene.text.FontSmoothingType)? = null): javafx.scene.text.FontSmoothingType =
+    template<javafx.scene.text.FontSmoothingType>("fontSmoothingType", f, this, fontSmoothingTypeProperty()!! as ObservableValue<javafx.scene.text.FontSmoothingType>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.web.WebView.width(f: (() -> Double)? = null): Double =
@@ -3589,22 +3605,6 @@ public fun  javafx.scene.web.WebView.maxWidth(f: (() -> Double)? = null): Double
 public fun  javafx.scene.web.WebView.maxHeight(f: (() -> Double)? = null): Double =
     template<Double>("maxHeight", f, this, maxHeightProperty()!! as ObservableValue<Double>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.web.WebView.fontScale(f: (() -> Double)? = null): Double =
-    template<Double>("fontScale", f, this, fontScaleProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.web.WebView.zoom(f: (() -> Double)? = null): Double =
-    template<Double>("zoom", f, this, zoomProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.web.WebView.contextMenuEnabled(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("contextMenuEnabled", f, this, contextMenuEnabledProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.web.WebView.fontSmoothingType(f: (() -> javafx.scene.text.FontSmoothingType)? = null): javafx.scene.text.FontSmoothingType =
-    template<javafx.scene.text.FontSmoothingType>("fontSmoothingType", f, this, fontSmoothingTypeProperty()!! as ObservableValue<javafx.scene.text.FontSmoothingType>)
-
 // javafx.scene.control.Toggle
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -3628,6 +3628,10 @@ public fun  javafx.scene.control.MenuBar.useSystemMenuBar(f: (() -> Boolean)? = 
     template<Boolean>("useSystemMenuBar", f, this, useSystemMenuBarProperty()!! as ObservableValue<Boolean>)
 
 // javafx.concurrent.ScheduledService
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <V> javafx.concurrent.ScheduledService<V>.delay(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
+    template<javafx.util.Duration>("delay", f, this, delayProperty()!! as ObservableValue<javafx.util.Duration>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <V> javafx.concurrent.ScheduledService<V>.period(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
@@ -3661,11 +3665,11 @@ public fun <V> javafx.concurrent.ScheduledService<V>.maximumCumulativePeriod(f: 
 public fun <V> javafx.concurrent.ScheduledService<V>.lastValue(f: (() -> V)? = null): V =
     template<V>("lastValue", f, this, lastValueProperty()!! as ObservableValue<V>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <V> javafx.concurrent.ScheduledService<V>.delay(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
-    template<javafx.util.Duration>("delay", f, this, delayProperty()!! as ObservableValue<javafx.util.Duration>)
-
 // javafx.scene.shape.Box
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.Box.depth(f: (() -> Double)? = null): Double =
+    template<Double>("depth", f, this, depthProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.Box.width(f: (() -> Double)? = null): Double =
@@ -3675,19 +3679,15 @@ public fun  javafx.scene.shape.Box.width(f: (() -> Double)? = null): Double =
 public fun  javafx.scene.shape.Box.height(f: (() -> Double)? = null): Double =
     template<Double>("height", f, this, heightProperty()!! as ObservableValue<Double>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.Box.depth(f: (() -> Double)? = null): Double =
-    template<Double>("depth", f, this, depthProperty()!! as ObservableValue<Double>)
-
 // javafx.scene.effect.Bloom
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.Bloom.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
-    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.Bloom.threshold(f: (() -> Double)? = null): Double =
     template<Double>("threshold", f, this, thresholdProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.Bloom.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
+    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
 
 // javafx.scene.control.SplitPane.Divider
 
@@ -3704,12 +3704,12 @@ public fun  javafx.beans.property.ReadOnlyLongWrapper.getReadOnly(f: (() -> Long
 // javafx.scene.media.AudioClip
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.AudioClip.pan(f: (() -> Double)? = null): Double =
-    template<Double>("pan", f, this, panProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.media.AudioClip.rate(f: (() -> Double)? = null): Double =
+    template<Double>("rate", f, this, rateProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.AudioClip.priority(f: (() -> Int)? = null): Int =
-    template<Int>("priority", f, this, priorityProperty()!! as ObservableValue<Int>)
+public fun  javafx.scene.media.AudioClip.cycleCount(f: (() -> Int)? = null): Int =
+    template<Int>("cycleCount", f, this, cycleCountProperty()!! as ObservableValue<Int>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.media.AudioClip.volume(f: (() -> Double)? = null): Double =
@@ -3720,14 +3720,26 @@ public fun  javafx.scene.media.AudioClip.balance(f: (() -> Double)? = null): Dou
     template<Double>("balance", f, this, balanceProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.AudioClip.rate(f: (() -> Double)? = null): Double =
-    template<Double>("rate", f, this, rateProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.media.AudioClip.priority(f: (() -> Int)? = null): Int =
+    template<Int>("priority", f, this, priorityProperty()!! as ObservableValue<Int>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.media.AudioClip.cycleCount(f: (() -> Int)? = null): Int =
-    template<Int>("cycleCount", f, this, cycleCountProperty()!! as ObservableValue<Int>)
+public fun  javafx.scene.media.AudioClip.pan(f: (() -> Double)? = null): Double =
+    template<Double>("pan", f, this, panProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.transform.Affine
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.transform.Affine.mzy(f: (() -> Double)? = null): Double =
+    template<Double>("mzy", f, this, mzyProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.transform.Affine.mzz(f: (() -> Double)? = null): Double =
+    template<Double>("mzz", f, this, mzzProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.transform.Affine.tz(f: (() -> Double)? = null): Double =
+    template<Double>("tz", f, this, tzProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.transform.Affine.mxx(f: (() -> Double)? = null): Double =
@@ -3765,18 +3777,6 @@ public fun  javafx.scene.transform.Affine.myz(f: (() -> Double)? = null): Double
 public fun  javafx.scene.transform.Affine.mzx(f: (() -> Double)? = null): Double =
     template<Double>("mzx", f, this, mzxProperty()!! as ObservableValue<Double>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.transform.Affine.mzy(f: (() -> Double)? = null): Double =
-    template<Double>("mzy", f, this, mzyProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.transform.Affine.mzz(f: (() -> Double)? = null): Double =
-    template<Double>("mzz", f, this, mzzProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.transform.Affine.tz(f: (() -> Double)? = null): Double =
-    template<Double>("tz", f, this, tzProperty()!! as ObservableValue<Double>)
-
 // javafx.beans.property.ReadOnlyObjectWrapper
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -3806,10 +3806,6 @@ public fun  javafx.scene.effect.GaussianBlur.radius(f: (() -> Double)? = null): 
 // javafx.scene.chart.XYChart.Series
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <X, Y> javafx.scene.chart.XYChart.Series<X, Y>.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
-    template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <X, Y> javafx.scene.chart.XYChart.Series<X, Y>.chart(f: (() -> javafx.scene.chart.XYChart<X, Y>)? = null): javafx.scene.chart.XYChart<X, Y> =
     template<javafx.scene.chart.XYChart<X, Y>>("chart", f, this, chartProperty()!! as ObservableValue<javafx.scene.chart.XYChart<X, Y>>)
 
@@ -3820,6 +3816,10 @@ public fun <X, Y> javafx.scene.chart.XYChart.Series<X, Y>.name(f: (() -> String)
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <X, Y> javafx.scene.chart.XYChart.Series<X, Y>.data(f: (() -> javafx.collections.ObservableList<javafx.scene.chart.XYChart.Data<X, Y>>)? = null): javafx.collections.ObservableList<javafx.scene.chart.XYChart.Data<X, Y>> =
     template<javafx.collections.ObservableList<javafx.scene.chart.XYChart.Data<X, Y>>>("data", f, this, dataProperty()!! as ObservableValue<javafx.collections.ObservableList<javafx.scene.chart.XYChart.Data<X, Y>>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <X, Y> javafx.scene.chart.XYChart.Series<X, Y>.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
+    template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
 
 // javafx.beans.binding.MapBinding
 
@@ -3862,12 +3862,12 @@ public fun  javafx.scene.chart.CategoryAxis.categorySpacing(f: (() -> Double)? =
 // javafx.scene.control.ButtonBase
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.ButtonBase.armed(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("armed", f, this, armedProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.ButtonBase.onAction(f: (() -> javafx.event.EventHandler<javafx.event.ActionEvent>)? = null): javafx.event.EventHandler<javafx.event.ActionEvent> =
     template<javafx.event.EventHandler<javafx.event.ActionEvent>>("onAction", f, this, onActionProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.event.ActionEvent>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.ButtonBase.armed(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("armed", f, this, armedProperty()!! as ObservableValue<Boolean>)
 
 // javafx.scene.chart.Axis
 
@@ -3900,6 +3900,10 @@ public fun <T> javafx.scene.chart.Axis<T>.tickLabelsVisible(f: (() -> Boolean)? 
     template<Boolean>("tickLabelsVisible", f, this, tickLabelsVisibleProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.chart.Axis<T>.autoRanging(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("autoRanging", f, this, autoRangingProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.chart.Axis<T>.label(f: (() -> String)? = null): String =
     template<String>("label", f, this, labelProperty()!! as ObservableValue<String>)
 
@@ -3911,10 +3915,6 @@ public fun <T> javafx.scene.chart.Axis<T>.tickLabelRotation(f: (() -> Double)? =
 public fun <T> javafx.scene.chart.Axis<T>.animated(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("animated", f, this, animatedProperty()!! as ObservableValue<Boolean>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.chart.Axis<T>.autoRanging(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("autoRanging", f, this, autoRangingProperty()!! as ObservableValue<Boolean>)
-
 // javafx.scene.control.cell.ChoiceBoxTreeTableCell
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
@@ -3922,14 +3922,6 @@ public fun <S, T> javafx.scene.control.cell.ChoiceBoxTreeTableCell<S, T>.convert
     template<javafx.util.StringConverter<T>>("converter", f, this, converterProperty()!! as ObservableValue<javafx.util.StringConverter<T>>)
 
 // javafx.animation.FadeTransition
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.animation.FadeTransition.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
-    template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.animation.FadeTransition.byValue(f: (() -> Double)? = null): Double =
-    template<Double>("byValue", f, this, byValueProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.animation.FadeTransition.duration(f: (() -> javafx.util.Duration)? = null): javafx.util.Duration =
@@ -3942,6 +3934,14 @@ public fun  javafx.animation.FadeTransition.fromValue(f: (() -> Double)? = null)
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.animation.FadeTransition.toValue(f: (() -> Double)? = null): Double =
     template<Double>("toValue", f, this, toValueProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.animation.FadeTransition.node(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
+    template<javafx.scene.Node>("node", f, this, nodeProperty()!! as ObservableValue<javafx.scene.Node>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.animation.FadeTransition.byValue(f: (() -> Double)? = null): Double =
+    template<Double>("byValue", f, this, byValueProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.control.TreeCell
 
@@ -3998,6 +3998,10 @@ public fun  javafx.scene.transform.Rotate.axis(f: (() -> javafx.geometry.Point3D
 // javafx.scene.control.Separator
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.Separator.orientation(f: (() -> javafx.geometry.Orientation)? = null): javafx.geometry.Orientation =
+    template<javafx.geometry.Orientation>("orientation", f, this, orientationProperty()!! as ObservableValue<javafx.geometry.Orientation>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.Separator.halignment(f: (() -> javafx.geometry.HPos)? = null): javafx.geometry.HPos =
     template<javafx.geometry.HPos>("halignment", f, this, halignmentProperty()!! as ObservableValue<javafx.geometry.HPos>)
 
@@ -4005,19 +4009,7 @@ public fun  javafx.scene.control.Separator.halignment(f: (() -> javafx.geometry.
 public fun  javafx.scene.control.Separator.valignment(f: (() -> javafx.geometry.VPos)? = null): javafx.geometry.VPos =
     template<javafx.geometry.VPos>("valignment", f, this, valignmentProperty()!! as ObservableValue<javafx.geometry.VPos>)
 
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.Separator.orientation(f: (() -> javafx.geometry.Orientation)? = null): javafx.geometry.Orientation =
-    template<javafx.geometry.Orientation>("orientation", f, this, orientationProperty()!! as ObservableValue<javafx.geometry.Orientation>)
-
 // javafx.scene.effect.Light.Spot
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.Light.Spot.pointsAtX(f: (() -> Double)? = null): Double =
-    template<Double>("pointsAtX", f, this, pointsAtXProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.Light.Spot.pointsAtY(f: (() -> Double)? = null): Double =
-    template<Double>("pointsAtY", f, this, pointsAtYProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.Light.Spot.specularExponent(f: (() -> Double)? = null): Double =
@@ -4026,6 +4018,14 @@ public fun  javafx.scene.effect.Light.Spot.specularExponent(f: (() -> Double)? =
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.Light.Spot.pointsAtZ(f: (() -> Double)? = null): Double =
     template<Double>("pointsAtZ", f, this, pointsAtZProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.Light.Spot.pointsAtX(f: (() -> Double)? = null): Double =
+    template<Double>("pointsAtX", f, this, pointsAtXProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.Light.Spot.pointsAtY(f: (() -> Double)? = null): Double =
+    template<Double>("pointsAtY", f, this, pointsAtYProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.chart.BarChart
 
@@ -4050,24 +4050,24 @@ public fun  javafx.scene.control.ToggleButton.toggleGroup(f: (() -> javafx.scene
 // javafx.scene.control.ChoiceBox
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ChoiceBox<T>.value(f: (() -> T)? = null): T =
-    template<T>("value", f, this, valueProperty()!! as ObservableValue<T>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ChoiceBox<T>.converter(f: (() -> javafx.util.StringConverter<T>)? = null): javafx.util.StringConverter<T> =
-    template<javafx.util.StringConverter<T>>("converter", f, this, converterProperty()!! as ObservableValue<javafx.util.StringConverter<T>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.ChoiceBox<T>.showing(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("showing", f, this, showingProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.ChoiceBox<T>.items(f: (() -> javafx.collections.ObservableList<T>)? = null): javafx.collections.ObservableList<T> =
     template<javafx.collections.ObservableList<T>>("items", f, this, itemsProperty()!! as ObservableValue<javafx.collections.ObservableList<T>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.ChoiceBox<T>.selectionModel(f: (() -> javafx.scene.control.SingleSelectionModel<T>)? = null): javafx.scene.control.SingleSelectionModel<T> =
     template<javafx.scene.control.SingleSelectionModel<T>>("selectionModel", f, this, selectionModelProperty()!! as ObservableValue<javafx.scene.control.SingleSelectionModel<T>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.ChoiceBox<T>.converter(f: (() -> javafx.util.StringConverter<T>)? = null): javafx.util.StringConverter<T> =
+    template<javafx.util.StringConverter<T>>("converter", f, this, converterProperty()!! as ObservableValue<javafx.util.StringConverter<T>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.ChoiceBox<T>.value(f: (() -> T)? = null): T =
+    template<T>("value", f, this, valueProperty()!! as ObservableValue<T>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.ChoiceBox<T>.showing(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("showing", f, this, showingProperty()!! as ObservableValue<Boolean>)
 
 // javafx.scene.control.CheckMenuItem
 
@@ -4094,6 +4094,14 @@ public fun  javafx.scene.control.Tab.disabled(f: (() -> Boolean)? = null): Boole
     template<Boolean>("disabled", f, this, disabledProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.Tab.onClosed(f: (() -> javafx.event.EventHandler<javafx.event.Event>)? = null): javafx.event.EventHandler<javafx.event.Event> =
+    template<javafx.event.EventHandler<javafx.event.Event>>("onClosed", f, this, onClosedProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.event.Event>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.Tab.onSelectionChanged(f: (() -> javafx.event.EventHandler<javafx.event.Event>)? = null): javafx.event.EventHandler<javafx.event.Event> =
+    template<javafx.event.EventHandler<javafx.event.Event>>("onSelectionChanged", f, this, onSelectionChangedProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.event.Event>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.Tab.selected(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("selected", f, this, selectedProperty()!! as ObservableValue<Boolean>)
 
@@ -4114,14 +4122,6 @@ public fun  javafx.scene.control.Tab.contextMenu(f: (() -> javafx.scene.control.
     template<javafx.scene.control.ContextMenu>("contextMenu", f, this, contextMenuProperty()!! as ObservableValue<javafx.scene.control.ContextMenu>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.Tab.onClosed(f: (() -> javafx.event.EventHandler<javafx.event.Event>)? = null): javafx.event.EventHandler<javafx.event.Event> =
-    template<javafx.event.EventHandler<javafx.event.Event>>("onClosed", f, this, onClosedProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.event.Event>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.Tab.onSelectionChanged(f: (() -> javafx.event.EventHandler<javafx.event.Event>)? = null): javafx.event.EventHandler<javafx.event.Event> =
-    template<javafx.event.EventHandler<javafx.event.Event>>("onSelectionChanged", f, this, onSelectionChangedProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.event.Event>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.Tab.content(f: (() -> javafx.scene.Node)? = null): javafx.scene.Node =
     template<javafx.scene.Node>("content", f, this, contentProperty()!! as ObservableValue<javafx.scene.Node>)
 
@@ -4140,16 +4140,16 @@ public fun  javafx.scene.control.Tab.closable(f: (() -> Boolean)? = null): Boole
 // javafx.scene.effect.ImageInput
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.ImageInput.source(f: (() -> javafx.scene.image.Image)? = null): javafx.scene.image.Image =
-    template<javafx.scene.image.Image>("source", f, this, sourceProperty()!! as ObservableValue<javafx.scene.image.Image>)
+public fun  javafx.scene.effect.ImageInput.y(f: (() -> Double)? = null): Double =
+    template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.ImageInput.x(f: (() -> Double)? = null): Double =
     template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.ImageInput.y(f: (() -> Double)? = null): Double =
-    template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.effect.ImageInput.source(f: (() -> javafx.scene.image.Image)? = null): javafx.scene.image.Image =
+    template<javafx.scene.image.Image>("source", f, this, sourceProperty()!! as ObservableValue<javafx.scene.image.Image>)
 
 // javafx.scene.control.TableColumnBase
 
@@ -4198,10 +4198,6 @@ public fun <S, T> javafx.scene.control.TableColumnBase<S, T>.maxWidth(f: (() -> 
     template<Double>("maxWidth", f, this, maxWidthProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S, T> javafx.scene.control.TableColumnBase<S, T>.comparator(f: (() -> java.util.Comparator<T>)? = null): java.util.Comparator<T> =
-    template<java.util.Comparator<T>>("comparator", f, this, comparatorProperty()!! as ObservableValue<java.util.Comparator<T>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <S, T> javafx.scene.control.TableColumnBase<S, T>.parentColumn(f: (() -> javafx.scene.control.TableColumnBase<S, *>)? = null): javafx.scene.control.TableColumnBase<S, *> =
     template<javafx.scene.control.TableColumnBase<S, *>>("parentColumn", f, this, parentColumnProperty()!! as ObservableValue<javafx.scene.control.TableColumnBase<S, *>>)
 
@@ -4216,6 +4212,10 @@ public fun <S, T> javafx.scene.control.TableColumnBase<S, T>.resizable(f: (() ->
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <S, T> javafx.scene.control.TableColumnBase<S, T>.sortable(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("sortable", f, this, sortableProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S, T> javafx.scene.control.TableColumnBase<S, T>.comparator(f: (() -> java.util.Comparator<T>)? = null): java.util.Comparator<T> =
+    template<java.util.Comparator<T>>("comparator", f, this, comparatorProperty()!! as ObservableValue<java.util.Comparator<T>>)
 
 // javafx.animation.StrokeTransition
 
@@ -4282,12 +4282,12 @@ public fun <T> javafx.scene.control.FocusModel<T>.focusedItem(f: (() -> T)? = nu
 // javafx.scene.effect.PerspectiveTransform
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.PerspectiveTransform.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
-    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.PerspectiveTransform.uly(f: (() -> Double)? = null): Double =
     template<Double>("uly", f, this, ulyProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.PerspectiveTransform.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
+    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.PerspectiveTransform.ulx(f: (() -> Double)? = null): Double =
@@ -4310,28 +4310,24 @@ public fun  javafx.scene.effect.PerspectiveTransform.lrx(f: (() -> Double)? = nu
     template<Double>("lrx", f, this, lrxProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.PerspectiveTransform.urx(f: (() -> Double)? = null): Double =
-    template<Double>("urx", f, this, urxProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.PerspectiveTransform.ury(f: (() -> Double)? = null): Double =
     template<Double>("ury", f, this, uryProperty()!! as ObservableValue<Double>)
 
-// javafx.scene.shape.MoveTo
-
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.MoveTo.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.effect.PerspectiveTransform.urx(f: (() -> Double)? = null): Double =
+    template<Double>("urx", f, this, urxProperty()!! as ObservableValue<Double>)
+
+// javafx.scene.shape.MoveTo
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.MoveTo.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
 
-// javafx.scene.layout.VBox
-
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.layout.VBox.fillWidth(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("fillWidth", f, this, fillWidthProperty()!! as ObservableValue<Boolean>)
+public fun  javafx.scene.shape.MoveTo.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
+
+// javafx.scene.layout.VBox
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.layout.VBox.alignment(f: (() -> javafx.geometry.Pos)? = null): javafx.geometry.Pos =
@@ -4340,6 +4336,10 @@ public fun  javafx.scene.layout.VBox.alignment(f: (() -> javafx.geometry.Pos)? =
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.layout.VBox.spacing(f: (() -> Double)? = null): Double =
     template<Double>("spacing", f, this, spacingProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.layout.VBox.fillWidth(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("fillWidth", f, this, fillWidthProperty()!! as ObservableValue<Boolean>)
 
 // javafx.concurrent.Task
 
@@ -4504,10 +4504,6 @@ public fun <T> javafx.scene.control.MultipleSelectionModel<T>.selectionMode(f: (
 // javafx.scene.shape.ArcTo
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.ArcTo.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.ArcTo.radiusX(f: (() -> Double)? = null): Double =
     template<Double>("radiusX", f, this, radiusXProperty()!! as ObservableValue<Double>)
 
@@ -4520,16 +4516,20 @@ public fun  javafx.scene.shape.ArcTo.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.ArcTo.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.ArcTo.XAxisRotation(f: (() -> Double)? = null): Double =
+    template<Double>("XAxisRotation", f, this, XAxisRotationProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.ArcTo.largeArcFlag(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("largeArcFlag", f, this, largeArcFlagProperty()!! as ObservableValue<Boolean>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.ArcTo.sweepFlag(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("sweepFlag", f, this, sweepFlagProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.ArcTo.XAxisRotation(f: (() -> Double)? = null): Double =
-    template<Double>("XAxisRotation", f, this, XAxisRotationProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.shape.CubicCurve
 
@@ -4542,12 +4542,20 @@ public fun  javafx.scene.shape.CubicCurve.controlX2(f: (() -> Double)? = null): 
     template<Double>("controlX2", f, this, controlX2Property()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.CubicCurve.controlX1(f: (() -> Double)? = null): Double =
+    template<Double>("controlX1", f, this, controlX1Property()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.CubicCurve.controlY1(f: (() -> Double)? = null): Double =
     template<Double>("controlY1", f, this, controlY1Property()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.CubicCurve.controlX1(f: (() -> Double)? = null): Double =
-    template<Double>("controlX1", f, this, controlX1Property()!! as ObservableValue<Double>)
+public fun  javafx.scene.shape.CubicCurve.endX(f: (() -> Double)? = null): Double =
+    template<Double>("endX", f, this, endXProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.CubicCurve.endY(f: (() -> Double)? = null): Double =
+    template<Double>("endY", f, this, endYProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.CubicCurve.startY(f: (() -> Double)? = null): Double =
@@ -4556,14 +4564,6 @@ public fun  javafx.scene.shape.CubicCurve.startY(f: (() -> Double)? = null): Dou
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.CubicCurve.startX(f: (() -> Double)? = null): Double =
     template<Double>("startX", f, this, startXProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.CubicCurve.endY(f: (() -> Double)? = null): Double =
-    template<Double>("endY", f, this, endYProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.CubicCurve.endX(f: (() -> Double)? = null): Double =
-    template<Double>("endX", f, this, endXProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.control.cell.ChoiceBoxListCell
 
@@ -4574,12 +4574,8 @@ public fun <T> javafx.scene.control.cell.ChoiceBoxListCell<T>.converter(f: (() -
 // javafx.scene.control.TabPane
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.TabPane.side(f: (() -> javafx.geometry.Side)? = null): javafx.geometry.Side =
-    template<javafx.geometry.Side>("side", f, this, sideProperty()!! as ObservableValue<javafx.geometry.Side>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.TabPane.tabMinWidth(f: (() -> Double)? = null): Double =
-    template<Double>("tabMinWidth", f, this, tabMinWidthProperty()!! as ObservableValue<Double>)
+public fun  javafx.scene.control.TabPane.selectionModel(f: (() -> javafx.scene.control.SingleSelectionModel<javafx.scene.control.Tab>)? = null): javafx.scene.control.SingleSelectionModel<javafx.scene.control.Tab> =
+    template<javafx.scene.control.SingleSelectionModel<javafx.scene.control.Tab>>("selectionModel", f, this, selectionModelProperty()!! as ObservableValue<javafx.scene.control.SingleSelectionModel<javafx.scene.control.Tab>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.TabPane.tabClosingPolicy(f: (() -> javafx.scene.control.TabPane.TabClosingPolicy)? = null): javafx.scene.control.TabPane.TabClosingPolicy =
@@ -4588,6 +4584,14 @@ public fun  javafx.scene.control.TabPane.tabClosingPolicy(f: (() -> javafx.scene
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.TabPane.rotateGraphic(f: (() -> Boolean)? = null): Boolean =
     template<Boolean>("rotateGraphic", f, this, rotateGraphicProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.TabPane.side(f: (() -> javafx.geometry.Side)? = null): javafx.geometry.Side =
+    template<javafx.geometry.Side>("side", f, this, sideProperty()!! as ObservableValue<javafx.geometry.Side>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.TabPane.tabMinWidth(f: (() -> Double)? = null): Double =
+    template<Double>("tabMinWidth", f, this, tabMinWidthProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.TabPane.tabMinHeight(f: (() -> Double)? = null): Double =
@@ -4600,10 +4604,6 @@ public fun  javafx.scene.control.TabPane.tabMaxWidth(f: (() -> Double)? = null):
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.TabPane.tabMaxHeight(f: (() -> Double)? = null): Double =
     template<Double>("tabMaxHeight", f, this, tabMaxHeightProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.TabPane.selectionModel(f: (() -> javafx.scene.control.SingleSelectionModel<javafx.scene.control.Tab>)? = null): javafx.scene.control.SingleSelectionModel<javafx.scene.control.Tab> =
-    template<javafx.scene.control.SingleSelectionModel<javafx.scene.control.Tab>>("selectionModel", f, this, selectionModelProperty()!! as ObservableValue<javafx.scene.control.SingleSelectionModel<javafx.scene.control.Tab>>)
 
 // javafx.scene.control.SelectionModel
 
@@ -4630,20 +4630,20 @@ public fun  javafx.scene.paint.PhongMaterial.specularMap(f: (() -> javafx.scene.
     template<javafx.scene.image.Image>("specularMap", f, this, specularMapProperty()!! as ObservableValue<javafx.scene.image.Image>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.paint.PhongMaterial.specularPower(f: (() -> Double)? = null): Double =
-    template<Double>("specularPower", f, this, specularPowerProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.paint.PhongMaterial.specularColor(f: (() -> javafx.scene.paint.Color)? = null): javafx.scene.paint.Color =
     template<javafx.scene.paint.Color>("specularColor", f, this, specularColorProperty()!! as ObservableValue<javafx.scene.paint.Color>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.paint.PhongMaterial.diffuseColor(f: (() -> javafx.scene.paint.Color)? = null): javafx.scene.paint.Color =
-    template<javafx.scene.paint.Color>("diffuseColor", f, this, diffuseColorProperty()!! as ObservableValue<javafx.scene.paint.Color>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.paint.PhongMaterial.diffuseMap(f: (() -> javafx.scene.image.Image)? = null): javafx.scene.image.Image =
     template<javafx.scene.image.Image>("diffuseMap", f, this, diffuseMapProperty()!! as ObservableValue<javafx.scene.image.Image>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.paint.PhongMaterial.specularPower(f: (() -> Double)? = null): Double =
+    template<Double>("specularPower", f, this, specularPowerProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.paint.PhongMaterial.diffuseColor(f: (() -> javafx.scene.paint.Color)? = null): javafx.scene.paint.Color =
+    template<javafx.scene.paint.Color>("diffuseColor", f, this, diffuseColorProperty()!! as ObservableValue<javafx.scene.paint.Color>)
 
 // javafx.scene.control.cell.ComboBoxTreeCell
 
@@ -4658,12 +4658,12 @@ public fun <T> javafx.scene.control.cell.ComboBoxTreeCell<T>.converter(f: (() ->
 // javafx.scene.transform.Shear
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.transform.Shear.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.transform.Shear.y(f: (() -> Double)? = null): Double =
     template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.transform.Shear.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.transform.Shear.pivotX(f: (() -> Double)? = null): Double =
@@ -4676,30 +4676,18 @@ public fun  javafx.scene.transform.Shear.pivotY(f: (() -> Double)? = null): Doub
 // javafx.scene.effect.MotionBlur
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.MotionBlur.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
-    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.MotionBlur.angle(f: (() -> Double)? = null): Double =
     template<Double>("angle", f, this, angleProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.MotionBlur.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
+    template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.MotionBlur.radius(f: (() -> Double)? = null): Double =
     template<Double>("radius", f, this, radiusProperty()!! as ObservableValue<Double>)
 
 // javafx.scene.control.TextInputControl
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.TextInputControl.editable(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("editable", f, this, editableProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.TextInputControl.text(f: (() -> String)? = null): String =
-    template<String>("text", f, this, textProperty()!! as ObservableValue<String>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.control.TextInputControl.font(f: (() -> javafx.scene.text.Font)? = null): javafx.scene.text.Font =
-    template<javafx.scene.text.Font>("font", f, this, fontProperty()!! as ObservableValue<javafx.scene.text.Font>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.TextInputControl.promptText(f: (() -> String)? = null): String =
@@ -4724,6 +4712,18 @@ public fun  javafx.scene.control.TextInputControl.anchor(f: (() -> Int)? = null)
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.control.TextInputControl.caretPosition(f: (() -> Int)? = null): Int =
     template<Int>("caretPosition", f, this, caretPositionProperty()!! as ObservableValue<Int>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.TextInputControl.editable(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("editable", f, this, editableProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.TextInputControl.text(f: (() -> String)? = null): String =
+    template<String>("text", f, this, textProperty()!! as ObservableValue<String>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.control.TextInputControl.font(f: (() -> javafx.scene.text.Font)? = null): javafx.scene.text.Font =
+    template<javafx.scene.text.Font>("font", f, this, fontProperty()!! as ObservableValue<javafx.scene.text.Font>)
 
 // javafx.animation.Transition
 
@@ -4756,32 +4756,16 @@ public fun  javafx.scene.shape.VLineTo.y(f: (() -> Double)? = null): Double =
 // javafx.scene.control.TreeView
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.TreeView<T>.editable(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("editable", f, this, editableProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.TreeView<T>.expandedItemCount(f: (() -> Int)? = null): Int =
-    template<Int>("expandedItemCount", f, this, expandedItemCountProperty()!! as ObservableValue<Int>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.TreeView<T>.onScrollTo(f: (() -> javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>)? = null): javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>> =
     template<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>("onScrollTo", f, this, onScrollToProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.TreeView<T>.showRoot(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("showRoot", f, this, showRootProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.TreeView<T>.fixedCellSize(f: (() -> Double)? = null): Double =
-    template<Double>("fixedCellSize", f, this, fixedCellSizeProperty()!! as ObservableValue<Double>)
+public fun <T> javafx.scene.control.TreeView<T>.selectionModel(f: (() -> javafx.scene.control.MultipleSelectionModel<javafx.scene.control.TreeItem<T>>)? = null): javafx.scene.control.MultipleSelectionModel<javafx.scene.control.TreeItem<T>> =
+    template<javafx.scene.control.MultipleSelectionModel<javafx.scene.control.TreeItem<T>>>("selectionModel", f, this, selectionModelProperty()!! as ObservableValue<javafx.scene.control.MultipleSelectionModel<javafx.scene.control.TreeItem<T>>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.TreeView<T>.root(f: (() -> javafx.scene.control.TreeItem<T>)? = null): javafx.scene.control.TreeItem<T> =
     template<javafx.scene.control.TreeItem<T>>("root", f, this, rootProperty()!! as ObservableValue<javafx.scene.control.TreeItem<T>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <T> javafx.scene.control.TreeView<T>.selectionModel(f: (() -> javafx.scene.control.MultipleSelectionModel<javafx.scene.control.TreeItem<T>>)? = null): javafx.scene.control.MultipleSelectionModel<javafx.scene.control.TreeItem<T>> =
-    template<javafx.scene.control.MultipleSelectionModel<javafx.scene.control.TreeItem<T>>>("selectionModel", f, this, selectionModelProperty()!! as ObservableValue<javafx.scene.control.MultipleSelectionModel<javafx.scene.control.TreeItem<T>>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.TreeView<T>.focusModel(f: (() -> javafx.scene.control.FocusModel<javafx.scene.control.TreeItem<T>>)? = null): javafx.scene.control.FocusModel<javafx.scene.control.TreeItem<T>> =
@@ -4804,18 +4788,26 @@ public fun <T> javafx.scene.control.TreeView<T>.onEditCancel(f: (() -> javafx.ev
     template<javafx.event.EventHandler<javafx.scene.control.TreeView.EditEvent<T>>>("onEditCancel", f, this, onEditCancelProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.TreeView.EditEvent<T>>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.TreeView<T>.showRoot(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("showRoot", f, this, showRootProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.TreeView<T>.expandedItemCount(f: (() -> Int)? = null): Int =
+    template<Int>("expandedItemCount", f, this, expandedItemCountProperty()!! as ObservableValue<Int>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <T> javafx.scene.control.TreeView<T>.editingItem(f: (() -> javafx.scene.control.TreeItem<T>)? = null): javafx.scene.control.TreeItem<T> =
     template<javafx.scene.control.TreeItem<T>>("editingItem", f, this, editingItemProperty()!! as ObservableValue<javafx.scene.control.TreeItem<T>>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.TreeView<T>.editable(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("editable", f, this, editableProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <T> javafx.scene.control.TreeView<T>.fixedCellSize(f: (() -> Double)? = null): Double =
+    template<Double>("fixedCellSize", f, this, fixedCellSizeProperty()!! as ObservableValue<Double>)
+
 // javafx.scene.shape.QuadCurveTo
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.QuadCurveTo.x(f: (() -> Double)? = null): Double =
-    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.shape.QuadCurveTo.y(f: (() -> Double)? = null): Double =
-    template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.QuadCurveTo.controlX(f: (() -> Double)? = null): Double =
@@ -4824,6 +4816,14 @@ public fun  javafx.scene.shape.QuadCurveTo.controlX(f: (() -> Double)? = null): 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.shape.QuadCurveTo.controlY(f: (() -> Double)? = null): Double =
     template<Double>("controlY", f, this, controlYProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.QuadCurveTo.y(f: (() -> Double)? = null): Double =
+    template<Double>("y", f, this, yProperty()!! as ObservableValue<Double>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.shape.QuadCurveTo.x(f: (() -> Double)? = null): Double =
+    template<Double>("x", f, this, xProperty()!! as ObservableValue<Double>)
 
 // javafx.animation.Animation
 
@@ -4876,24 +4876,8 @@ public fun <X, Y> javafx.scene.chart.AreaChart<X, Y>.createSymbols(f: (() -> Boo
 // javafx.scene.control.TableView
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TableView<S>.editable(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("editable", f, this, editableProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TableView<S>.editingCell(f: (() -> javafx.scene.control.TablePosition<S, *>)? = null): javafx.scene.control.TablePosition<S, *> =
-    template<javafx.scene.control.TablePosition<S, *>>("editingCell", f, this, editingCellProperty()!! as ObservableValue<javafx.scene.control.TablePosition<S, *>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TableView<S>.tableMenuButtonVisible(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("tableMenuButtonVisible", f, this, tableMenuButtonVisibleProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TableView<S>.rowFactory(f: (() -> javafx.util.Callback<javafx.scene.control.TableView<S>, javafx.scene.control.TableRow<S>>)? = null): javafx.util.Callback<javafx.scene.control.TableView<S>, javafx.scene.control.TableRow<S>> =
-    template<javafx.util.Callback<javafx.scene.control.TableView<S>, javafx.scene.control.TableRow<S>>>("rowFactory", f, this, rowFactoryProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TableView<S>, javafx.scene.control.TableRow<S>>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TableView<S>.comparator(f: (() -> java.util.Comparator<S>)? = null): java.util.Comparator<S> =
-    template<java.util.Comparator<S>>("comparator", f, this, comparatorProperty()!! as ObservableValue<java.util.Comparator<S>>)
+public fun <S> javafx.scene.control.TableView<S>.items(f: (() -> javafx.collections.ObservableList<S>)? = null): javafx.collections.ObservableList<S> =
+    template<javafx.collections.ObservableList<S>>("items", f, this, itemsProperty()!! as ObservableValue<javafx.collections.ObservableList<S>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <S> javafx.scene.control.TableView<S>.onScrollToColumn(f: (() -> javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<javafx.scene.control.TableColumn<S, *>>>)? = null): javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<javafx.scene.control.TableColumn<S, *>>> =
@@ -4902,14 +4886,6 @@ public fun <S> javafx.scene.control.TableView<S>.onScrollToColumn(f: (() -> java
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <S> javafx.scene.control.TableView<S>.onScrollTo(f: (() -> javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>)? = null): javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>> =
     template<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>("onScrollTo", f, this, onScrollToProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.control.ScrollToEvent<Int>>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TableView<S>.items(f: (() -> javafx.collections.ObservableList<S>)? = null): javafx.collections.ObservableList<S> =
-    template<javafx.collections.ObservableList<S>>("items", f, this, itemsProperty()!! as ObservableValue<javafx.collections.ObservableList<S>>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun <S> javafx.scene.control.TableView<S>.fixedCellSize(f: (() -> Double)? = null): Double =
-    template<Double>("fixedCellSize", f, this, fixedCellSizeProperty()!! as ObservableValue<Double>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun <S> javafx.scene.control.TableView<S>.selectionModel(f: (() -> javafx.scene.control.TableView.TableViewSelectionModel<S>)? = null): javafx.scene.control.TableView.TableViewSelectionModel<S> =
@@ -4935,7 +4911,35 @@ public fun <S> javafx.scene.control.TableView<S>.placeholder(f: (() -> javafx.sc
 public fun <S> javafx.scene.control.TableView<S>.focusModel(f: (() -> javafx.scene.control.TableView.TableViewFocusModel<S>)? = null): javafx.scene.control.TableView.TableViewFocusModel<S> =
     template<javafx.scene.control.TableView.TableViewFocusModel<S>>("focusModel", f, this, focusModelProperty()!! as ObservableValue<javafx.scene.control.TableView.TableViewFocusModel<S>>)
 
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TableView<S>.editingCell(f: (() -> javafx.scene.control.TablePosition<S, *>)? = null): javafx.scene.control.TablePosition<S, *> =
+    template<javafx.scene.control.TablePosition<S, *>>("editingCell", f, this, editingCellProperty()!! as ObservableValue<javafx.scene.control.TablePosition<S, *>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TableView<S>.tableMenuButtonVisible(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("tableMenuButtonVisible", f, this, tableMenuButtonVisibleProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TableView<S>.rowFactory(f: (() -> javafx.util.Callback<javafx.scene.control.TableView<S>, javafx.scene.control.TableRow<S>>)? = null): javafx.util.Callback<javafx.scene.control.TableView<S>, javafx.scene.control.TableRow<S>> =
+    template<javafx.util.Callback<javafx.scene.control.TableView<S>, javafx.scene.control.TableRow<S>>>("rowFactory", f, this, rowFactoryProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.control.TableView<S>, javafx.scene.control.TableRow<S>>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TableView<S>.editable(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("editable", f, this, editableProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TableView<S>.comparator(f: (() -> java.util.Comparator<S>)? = null): java.util.Comparator<S> =
+    template<java.util.Comparator<S>>("comparator", f, this, comparatorProperty()!! as ObservableValue<java.util.Comparator<S>>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun <S> javafx.scene.control.TableView<S>.fixedCellSize(f: (() -> Double)? = null): Double =
+    template<Double>("fixedCellSize", f, this, fixedCellSizeProperty()!! as ObservableValue<Double>)
+
 // javafx.scene.effect.BoxBlur
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.effect.BoxBlur.iterations(f: (() -> Int)? = null): Int =
+    template<Int>("iterations", f, this, iterationsProperty()!! as ObservableValue<Int>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.BoxBlur.width(f: (() -> Double)? = null): Double =
@@ -4948,10 +4952,6 @@ public fun  javafx.scene.effect.BoxBlur.height(f: (() -> Double)? = null): Doubl
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.effect.BoxBlur.input(f: (() -> javafx.scene.effect.Effect)? = null): javafx.scene.effect.Effect =
     template<javafx.scene.effect.Effect>("input", f, this, inputProperty()!! as ObservableValue<javafx.scene.effect.Effect>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.effect.BoxBlur.iterations(f: (() -> Int)? = null): Int =
-    template<Int>("iterations", f, this, iterationsProperty()!! as ObservableValue<Int>)
 
 // javafx.scene.effect.Light.Distant
 
@@ -4970,8 +4970,16 @@ public fun  javafx.scene.web.WebEngine.onError(f: (() -> javafx.event.EventHandl
     template<javafx.event.EventHandler<javafx.scene.web.WebErrorEvent>>("onError", f, this, onErrorProperty()!! as ObservableValue<javafx.event.EventHandler<javafx.scene.web.WebErrorEvent>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.web.WebEngine.title(f: (() -> String)? = null): String =
-    template<String>("title", f, this, titleProperty()!! as ObservableValue<String>)
+public fun  javafx.scene.web.WebEngine.javaScriptEnabled(f: (() -> Boolean)? = null): Boolean =
+    template<Boolean>("javaScriptEnabled", f, this, javaScriptEnabledProperty()!! as ObservableValue<Boolean>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.web.WebEngine.userStyleSheetLocation(f: (() -> String)? = null): String =
+    template<String>("userStyleSheetLocation", f, this, userStyleSheetLocationProperty()!! as ObservableValue<String>)
+
+[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
+public fun  javafx.scene.web.WebEngine.userAgent(f: (() -> String)? = null): String =
+    template<String>("userAgent", f, this, userAgentProperty()!! as ObservableValue<String>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
 public fun  javafx.scene.web.WebEngine.document(f: (() -> org.w3c.dom.Document)? = null): org.w3c.dom.Document =
@@ -5014,16 +5022,8 @@ public fun  javafx.scene.web.WebEngine.promptHandler(f: (() -> javafx.util.Callb
     template<javafx.util.Callback<javafx.scene.web.PromptData, String>>("promptHandler", f, this, promptHandlerProperty()!! as ObservableValue<javafx.util.Callback<javafx.scene.web.PromptData, String>>)
 
 [suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.web.WebEngine.userStyleSheetLocation(f: (() -> String)? = null): String =
-    template<String>("userStyleSheetLocation", f, this, userStyleSheetLocationProperty()!! as ObservableValue<String>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.web.WebEngine.javaScriptEnabled(f: (() -> Boolean)? = null): Boolean =
-    template<Boolean>("javaScriptEnabled", f, this, javaScriptEnabledProperty()!! as ObservableValue<Boolean>)
-
-[suppress("USELESS_CAST_STATIC_ASSERT_IS_FINE")] [suppress("UNCHECKED_CAST")]
-public fun  javafx.scene.web.WebEngine.userAgent(f: (() -> String)? = null): String =
-    template<String>("userAgent", f, this, userAgentProperty()!! as ObservableValue<String>)
+public fun  javafx.scene.web.WebEngine.title(f: (() -> String)? = null): String =
+    template<String>("title", f, this, titleProperty()!! as ObservableValue<String>)
 
 // javafx.animation.PauseTransition
 

@@ -5,7 +5,10 @@ import javafx.scene.shape.Rectangle as JRectangle
 import javafx.scene.layout.HBox
 import javafx.scene.Node
 
-import kotlinfx.properties.*
+import kotlinfx.properties1.*
+import kotlinfx.properties2.*
+import kotlinfx.properties3.*
+import kotlinfx.properties4.*
 import javafx.scene.layout.Pane
 import javafx.scene.layout.VBox
 import javafx.scene.layout.StackPane

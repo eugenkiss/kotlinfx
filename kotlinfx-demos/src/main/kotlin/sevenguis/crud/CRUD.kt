@@ -3,6 +3,10 @@ package demos.sevenguis.crud
 import javafx.application.Application
 import javafx.stage.Stage
 import kotlinfx.properties.*
+import kotlinfx.properties1.*
+import kotlinfx.properties2.*
+import kotlinfx.properties3.*
+import kotlinfx.properties4.*
 import kotlinfx.builders.*
 import kotlinfx.bindings.*
 import javafx.scene.control.ListView

@@ -71,6 +71,11 @@ task(genkalium, dependsOn: jar, type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
+task(genproperties, dependsOn: jar, type: JavaExec) {
+    main = 'genpropertiesext.GenpropertiesextPackage'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
 
 // Distribution
 

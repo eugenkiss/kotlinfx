@@ -59,11 +59,8 @@ fun main(args: Array<String>) {
             }
 
             // See http://docs.oracle.com/javafx/2/api/javafx/beans/property/package-summary.html
-            // Map is left out as there were problems.
             val ty = method.getGenericReturnType()!!.getTypeName()!!
-            val valTy: String? = extractValueType(ty,
-                listOf("Object", "List", "Set"),
-                listOf("Boolean", "Double", "Float", "Long", "Integer", "String"))
+            val valTy: String? = stdExtractValueType(ty)
             if (valTy == null) {
                 println("ERROR: $ty")
                 continue
@@ -91,6 +88,10 @@ public fun $tyParamsFirst $className$tyParams.$shortName(f: (() -> $valTyKt)? = 
 
     fw.close()
 }
+
+// Map is left out as there were problems.
+public fun stdExtractValueType(ty: String): String? = extractValueType(
+    ty, listOf("Object", "List", "Set"), listOf("Boolean", "Double", "Float", "Long", "Integer", "String"))
 
 fun extractValueType(ty: String, xs: List<String>, ys: List<String>): String? {
     for (x in xs) {
@@ -131,6 +132,8 @@ fun kotlinfyType(ty: String): String {
     t = t.replace("\$", ".")
     // '? super', '? extends' and '?' are kotlinfied
     t = t.replace("? super", "in").replace("? extends", "out").replace("?", "*")
+    // 'java.util.Set' etc. are kotlinfied
+    t = t.replace("java.util.Set", "MutableSet")
     // 'java.lang.Boolean' etc. are kotlinfied
     t = t.replace("java.lang.Object", "Any")
     t = t.replace("java.lang.Integer", "Int")
