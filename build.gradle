@@ -67,12 +67,12 @@ subprojects {
 // Code generation
 
 task(genkalium, dependsOn: jar, type: JavaExec) {
-    main = 'genkaliumext.GenkaliumextPackage'
+    main = 'genkalium.GenkaliumPackage'
     classpath = sourceSets.main.runtimeClasspath
 }
 
 task(genproperties, dependsOn: jar, type: JavaExec) {
-    main = 'genpropertiesext.GenpropertiesextPackage'
+    main = 'genproperties.GenpropertiesPackage'
     classpath = sourceSets.main.runtimeClasspath
 }
 

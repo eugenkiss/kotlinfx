@@ -3,10 +3,6 @@ package demos.helloworld
 
 import kotlinfx.builders.*
 import kotlinfx.properties.*
-import kotlinfx.properties1.*
-import kotlinfx.properties2.*
-import kotlinfx.properties3.*
-import kotlinfx.properties4.*
 import javafx.application.Application
 import javafx.stage.Stage
 

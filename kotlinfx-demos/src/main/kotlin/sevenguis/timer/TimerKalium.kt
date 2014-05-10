@@ -2,10 +2,6 @@ package demos.sevenguis.timerkalium
 
 import kotlinfx.builders.*
 import kotlinfx.properties.*
-import kotlinfx.properties1.*
-import kotlinfx.properties2.*
-import kotlinfx.properties3.*
-import kotlinfx.properties4.*
 import kotlinfx.bindings.*
 import kotlinfx.kalium.*
 import javafx.application.Application
