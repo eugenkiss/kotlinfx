@@ -3,6 +3,7 @@ package demos.sevenguis.flightbooker
 import kotlinfx.builders.*
 import kotlinfx.properties.*
 import kotlinfx.bindings.*
+import kotlinfx.abbreviations.*
 import javafx.application.Application
 import javafx.stage.Stage
 import javafx.scene.control.ComboBox
@@ -25,10 +26,10 @@ class FlightBooker : Application() {
         val book = Button("Book")
         book.setDisable(true)
 
-        returnDate.disableP bind (flightType.valueP eq "one-way flight")
-        startDate.textP.addListener{(v, o, n) ->
+        returnDate.disablep bind (flightType.valuep eq "one-way flight")
+        startDate.textp.addListener{(v, o, n) ->
                 startDate.setStyle(if (n.isDate) "" else "-fx-background-color: lightcoral")}
-        returnDate.textP.addListener{(v, o, n) ->
+        returnDate.textp.addListener{(v, o, n) ->
             returnDate.setStyle(if (n.isDate) "" else "-fx-background-color: lightcoral")}
         val bookEnabledAction = {(v: Any?, o: Any?, n: Any?) ->
             when (flightType.value) {
@@ -38,9 +39,9 @@ class FlightBooker : Application() {
                     startDate.text.asDate.compareTo(returnDate.text.asDate) > 0
             }
         }
-        flightType.valueP.addListener(bookEnabledAction)
-        startDate.textP.addListener(bookEnabledAction)
-        returnDate.textP.addListener(bookEnabledAction)
+        flightType.valuep.addListener(bookEnabledAction)
+        startDate.textp.addListener(bookEnabledAction)
+        returnDate.textp.addListener(bookEnabledAction)
         flightType.setValue("one-way flight")
 
         Stage(stage, title = "Flight Booker") {

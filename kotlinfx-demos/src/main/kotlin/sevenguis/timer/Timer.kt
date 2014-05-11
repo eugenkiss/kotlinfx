@@ -3,6 +3,7 @@ package demos.sevenguis.timer
 import kotlinfx.builders.*
 import kotlinfx.properties.*
 import kotlinfx.bindings.*
+import kotlinfx.abbreviations.*
 import javafx.application.Application
 import javafx.stage.Stage
 import javafx.scene.control.ProgressBar
@@ -27,7 +28,7 @@ class Timer : Application() {
         val reset = Button("Reset")
 
         val elapsed = SimpleDoubleProperty(0.0)
-        progress.progressP bind (elapsed / slider.valueP)
+        progress.progressp bind (elapsed / slider.valuep)
         elapsed.addListener { (v,o,n) ->
             numericProgress.text = formatElapsed(n!!.toInt()) }
         reset.setOnAction { elapsed.v = 0.0 }

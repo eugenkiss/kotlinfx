@@ -3,6 +3,7 @@ package demos.sevenguis.crud
 import kotlinfx.properties.*
 import kotlinfx.builders.*
 import kotlinfx.bindings.*
+import kotlinfx.abbreviations.*
 import javafx.application.Application
 import javafx.stage.Stage
 import javafx.scene.control.ListView
@@ -35,10 +36,10 @@ class CRUD : Application() {
         val filterableView = FilterableView(database)
         entries.setItems(filterableView)
 
-        val fullname = surname.textP + ", " + name.textP
+        val fullname = surname.textp + ", " + name.textp
         val selectedIndex = entries.getSelectionModel()!!.selectedIndexProperty()!! // TODO
         // TODO How to use closure syntax?
-        prefix.textP.addListener(object : ChangeListener<String> {
+        prefix.textp.addListener(object : ChangeListener<String> {
             override fun changed(v: ObservableValue<out String>?, o: String?, n: String?) {
                 filterableView.filterByPrefix(n!!)
             }
@@ -46,8 +47,8 @@ class CRUD : Application() {
         create.setOnAction { filterableView.create(fullname.v) }
         delete.setOnAction { filterableView.delete(selectedIndex.v) }
         update.setOnAction { filterableView.update(fullname.v, selectedIndex.v) }
-        delete.disableP bind (selectedIndex eq -1)
-        update.disableP bind (selectedIndex eq -1)
+        delete.disablep bind (selectedIndex eq -1)
+        update.disablep bind (selectedIndex eq -1)
 
         Stage(stage, title = "CRUD") {
             scene = Scene {

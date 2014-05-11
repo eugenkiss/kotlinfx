@@ -2,6 +2,7 @@ package demos.sevenguis.temperature
 
 import kotlinfx.builders.*
 import kotlinfx.properties.*
+import kotlinfx.abbreviations.*
 import javafx.application.Application
 import javafx.stage.Stage
 import javafx.scene.control.Label
@@ -16,7 +17,7 @@ class TemperatureConverter : Application() {
         val celsius = TextField()
         val fahrenheit = TextField()
 
-        celsius.textP.bindBidirectional(fahrenheit.textP, object : StringConverter<String>() {
+        celsius.textp.bindBidirectional(fahrenheit.textp, object : StringConverter<String>() {
             override fun fromString(c: String?): String? =
                 if (isNumeric(c!!)) cToF(c) else fahrenheit.text
             override fun toString(f: String?): String? =
