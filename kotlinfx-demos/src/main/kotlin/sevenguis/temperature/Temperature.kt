@@ -5,7 +5,6 @@ import kotlinfx.properties.*
 import kotlinfx.abbreviations.*
 import javafx.application.Application
 import javafx.stage.Stage
-import javafx.scene.control.Label
 import javafx.util.StringConverter
 
 fun main(args: Array<String>) {

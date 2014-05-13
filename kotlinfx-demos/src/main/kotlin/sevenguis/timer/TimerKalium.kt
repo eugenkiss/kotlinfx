@@ -6,8 +6,6 @@ import kotlinfx.bindings.*
 import kotlinfx.kalium.*
 import javafx.application.Application
 import javafx.stage.Stage
-import javafx.scene.control.ProgressBar
-import javafx.scene.control.Label
 import javafx.beans.property.SimpleDoubleProperty
 import javafx.animation.Timeline
 import javafx.animation.KeyFrame

@@ -6,7 +6,6 @@ import kotlinfx.bindings.*
 import kotlinfx.abbreviations.*
 import javafx.application.Application
 import javafx.stage.Stage
-import javafx.scene.control.ListView
 import javafx.scene.control.SelectionMode
 import javafx.collections.ObservableList
 import javafx.beans.property.SimpleListProperty
@@ -14,7 +13,6 @@ import javafx.collections.FXCollections
 import java.util.ArrayList
 import javafx.beans.value.ChangeListener
 import javafx.beans.value.ObservableValue
-import javafx.scene.control.Label
 import javafx.geometry.Pos
 
 fun main(args: Array<String>) {
