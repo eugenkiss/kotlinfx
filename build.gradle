@@ -11,10 +11,6 @@ buildscript {
 }
 
 
-group = 'com.eugenkiss'
-version = '0.1-SNAPSHOT'
-
-
 allprojects {
     repositories {
         mavenCentral()
@@ -113,15 +109,15 @@ def localRepoPath = ghpagesPath+"/repository"
 
 project(":kotlinfx-core") {
     apply plugin: 'maven'
-    group = "com.eugenkiss"
-    version = "0.1-SNAPSHOT"
+    group = rootProject.group
+    version = rootProject.version
     archivesBaseName = 'kotlinfx'
     uploadArchives {
         repositories.mavenDeployer {
             repository(url: "file:///" + localRepoPath)
-            pom.version = '0.1-SNAPSHOT'
+            pom.version = "${rootProject.version}"
             pom.artifactId = 'kotlinfx'
-            pom.groupId = 'com.eugenkiss'
+            pom.groupId = "${rootProject.group}"
         }
     }
 
