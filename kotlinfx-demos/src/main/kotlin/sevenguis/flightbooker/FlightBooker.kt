@@ -26,7 +26,7 @@ class FlightBooker : Application() {
         val book = Button("Book")
         book.setDisable(true)
 
-        returnDate.disablep bind (flightType.valuep eq "one-way flight")
+        returnDate.disablep bind (flightType.valuep isEqualTo "one-way flight")
         startDate.textp.addListener{(v, o, n) ->
                 startDate.setStyle(if (n.isDate) "" else "-fx-background-color: lightcoral")}
         returnDate.textp.addListener{(v, o, n) ->

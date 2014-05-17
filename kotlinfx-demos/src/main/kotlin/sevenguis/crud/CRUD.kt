@@ -45,8 +45,8 @@ class CRUD : Application() {
         create.setOnAction { filterableView.create(fullname.v) }
         delete.setOnAction { filterableView.delete(selectedIndex.v) }
         update.setOnAction { filterableView.update(fullname.v, selectedIndex.v) }
-        delete.disablep bind (selectedIndex eq -1)
-        update.disablep bind (selectedIndex eq -1)
+        delete.disablep bind (selectedIndex isEqualTo -1)
+        update.disablep bind (selectedIndex isEqualTo -1)
 
         Stage(stage, title = "CRUD") {
             scene = Scene {

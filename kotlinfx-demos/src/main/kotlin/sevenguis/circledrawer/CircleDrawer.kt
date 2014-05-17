@@ -2,6 +2,7 @@ package demos.sevenguis.circledrawer
 
 import kotlinfx.builders.*
 import kotlinfx.properties.*
+import kotlinfx.abbreviations.*
 import javafx.application.Application
 import javafx.stage.Stage
 
@@ -12,13 +13,25 @@ fun main(args: Array<String>) {
 
 class CircleDrawer : Application() {
     override fun start(stage: Stage?) {
-        Stage(stage, title = "Circle Drawer") {
+        val undo = Button("Undo")
+        val redo = Button("Redo")
+        val canvas = CircleDrawerCanvas()
+
+        Stage(stage, title="Circle Drawer") {
             scene = Scene {
-                root = HBox(spacing=10.0, padding=Insets(10.0)) {
+                root = BorderPane(padding=Insets(10.0)) {
+                    top = HBox(spacing=10.0, padding=Insets(10.0)) {
+                        + undo + redo
+                    }
+                    center = canvas
                 }
             }
         }.show()
     }
 }
 
+class CircleDrawerCanvas : javafx.scene.canvas.Canvas(400.0, 400.0) {
 
+}
+
+class Circle(val x: Double, val y: Double, var d: Double)
