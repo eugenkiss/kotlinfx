@@ -13,6 +13,8 @@ import javafx.util.Duration
 import javafx.event.ActionEvent
 import javafx.event.EventHandler
 import javafx.animation.Animation
+import javafx.beans.binding.Bindings
+import java.util.concurrent.Callable
 
 fun main(args: Array<String>) {
     Application.launch(javaClass<Timer>())
@@ -27,8 +29,10 @@ class Timer : Application() {
 
         val elapsed = SimpleDoubleProperty(0.0)
         progress.progressp bind (elapsed / slider.valuep)
-        elapsed.addListener { (v,o,n) ->
-            numericProgress.text = formatElapsed(n!!.toInt()) }
+        // TODO: closure instead of callable
+        numericProgress.textp bind Bindings.createStringBinding(object : Callable<String> { override fun call(): String? =
+            formatElapsed(elapsed.v)
+        }, elapsed)
         reset.setOnAction { elapsed.v = 0.0 }
 
         // TODO: Why can't I use closure syntax here?
@@ -53,7 +57,7 @@ class Timer : Application() {
     }
 }
 
-fun formatElapsed(elapsed: Int): String {
+fun formatElapsed(elapsed: Double): String {
     val seconds = Math.floor(elapsed / 10.0)
     val dezipart = elapsed % 10
     return "${seconds.toInt()}.${dezipart.toInt()}s"
