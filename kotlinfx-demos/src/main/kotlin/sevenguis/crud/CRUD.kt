@@ -14,6 +14,8 @@ import java.util.ArrayList
 import javafx.beans.value.ChangeListener
 import javafx.beans.value.ObservableValue
 import javafx.geometry.Pos
+import javafx.collections.ListChangeListener
+import java.util.function.Predicate
 
 fun main(args: Array<String>) {
     Application.launch(javaClass<CRUD>())
@@ -28,23 +30,48 @@ class CRUD : Application() {
         val update = Button("Update") { disable = true }
         val delete = Button("Delete") { disable = true }
         val entries = ListView<String>()
-        entries.getSelectionModel()!!.setSelectionMode(SelectionMode.SINGLE) // TODO
+        entries.selectionModel.selectionMode = SelectionMode.SINGLE
 
-        val database = arrayListOf("Emil, Hans", "Musterman, Max", "Tisch, Roman")
-        val filterableView = FilterableView(database)
-        entries.setItems(filterableView)
-
-        val fullname = surname.textp + ", " + name.textp
-        val selectedIndex = entries.getSelectionModel()!!.selectedIndexProperty()!! // TODO
-        // TODO How to use closure syntax?
-        prefix.textp.addListener(object : ChangeListener<String> {
-            override fun changed(v: ObservableValue<out String>?, o: String?, n: String?) {
-                filterableView.filterByPrefix(n!!)
+        val externDb = arrayListOf("Emil, Hans", "Musterman, Max", "Tisch, Roman")
+        val db = FXCollections.observableArrayList(externDb)!!
+        // TODO: Why not anonymous function?
+        db.addListener(object : ListChangeListener<String> {
+            override fun onChanged(c: ListChangeListener.Change<out String>?) {
+                c!!
+                while (c.next()) {
+                    if (c.wasReplaced()) externDb.set(c.getFrom(), c.getAddedSubList()!!.get(0))
+                    else {
+                        if (c.wasAdded()) externDb.add(c.getAddedSubList()!!.get(0))
+                        if (c.wasRemoved()) externDb.remove(c.getFrom())
+                    }
+                    // TODO: Type inference fails
+//                    if (c.wasReplaced()) externDb.set(c.from, c.addedSubList.get(0))
+//                    else {
+//                        if (c.wasAdded()) externDb.add(c.addedSubList.get(0))
+//                        if (c.wasRemoved()) externDb.remove(c.from)
+//                    }
+                }
             }
         })
-        create.setOnAction { filterableView.create(fullname.v) }
-        delete.setOnAction { filterableView.delete(selectedIndex.v) }
-        update.setOnAction { filterableView.update(fullname.v, selectedIndex.v) }
+        // TODO: Why not anonymous function?
+        val dbView = db.filtered(object : Predicate<String> {
+            override fun test(t: String?): Boolean = true
+        })!!
+        entries.setItems(dbView)
+
+        val fullname = surname.textp + ", " + name.textp
+        val selectedIndex = entries.selectionModel.selectedIndexp
+        // TODO: Why not anonymous function?
+        prefix.textp.addListener(object : ChangeListener<String> {
+            override fun changed(v: ObservableValue<out String>?, o: String?, n: String?) {
+                dbView.setPredicate(object : Predicate<String> {
+                    override fun test(t: String?): Boolean = t!!.startsWith(n!!)
+                })
+            }
+        })
+        create.setOnAction { db.add(fullname.v) }
+        delete.setOnAction { db.remove(dbView.getSourceIndex(selectedIndex.v)) }
+        update.setOnAction { db.set(dbView.getSourceIndex(selectedIndex.v), fullname.v) }
         delete.disablep bind (selectedIndex isEqualTo -1)
         update.disablep bind (selectedIndex isEqualTo -1)
 
@@ -73,60 +100,3 @@ class CRUD : Application() {
     }
 }
 
-
-public class FilterableView(database: MutableList<String>) : SimpleListProperty<String>() {
-
-    private val database: MutableList<String>
-    private val filteredDatabase: ObservableList<String>
-    private val filteredOriginalMap: MutableList<Int>
-    private var cachedPrefix: String = ""
-
-    {
-        this.database = database
-        filteredDatabase = FXCollections.observableArrayList()!!
-        filteredDatabase.addAll(database)
-        filteredOriginalMap = ArrayList<Int>()
-        for (i in 0..database.lastIndex) {
-            filteredOriginalMap.add(i)
-        }
-        this.set(filteredDatabase)
-    }
-
-    public fun filterByPrefix(prefix: String) {
-        cachedPrefix = prefix
-        filteredDatabase.clear()
-        filteredOriginalMap.clear()
-        for (i in 0..database.lastIndex) {
-            val entry = database.get(i)
-            if (entry.startsWith(prefix)) {
-                filteredDatabase.add(entry)
-                filteredOriginalMap.add(i)
-            }
-        }
-    }
-
-    public fun create(newEntry: String) {
-        database.add(newEntry)
-        if (newEntry.startsWith(cachedPrefix)) {
-            filteredDatabase.add(newEntry)
-            filteredOriginalMap.add(database.size() - 1)
-        }
-    }
-
-    public fun update(newEntry: String, index: Int) {
-        database.set(filteredOriginalMap.get(index), newEntry)
-        if (newEntry.startsWith(cachedPrefix)) {
-            filteredDatabase.set(index, newEntry)
-        } else {
-            filteredDatabase.remove(index)
-            filteredOriginalMap.remove(index)
-        }
-    }
-
-    public fun delete(index: Int) {
-        database.remove(filteredOriginalMap.get(index))
-        filteredDatabase.remove(index)
-        filteredOriginalMap.remove(index)
-    }
-
-}
