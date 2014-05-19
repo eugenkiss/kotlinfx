@@ -29,14 +29,16 @@ class FlightBookerKalium : Application() {
         startDate.style  { if (startDate.text().isDate)  "" else "-fx-background-color: lightcoral" }
         returnDate.style { if (returnDate.text().isDate) "" else "-fx-background-color: lightcoral" }
         book.disable {
-            when (flightType.value()) {
-                "one-way flight" -> !startDate.text().isDate
-                else             -> !startDate.text().isDate || !returnDate.text().isDate
-                                    || startDate.text().asDate.compareTo(returnDate.text().asDate) > 0
+            if (flightType.value() == "one-way flight") {
+                !startDate.text().isDate
+            } else {
+                !startDate.text().isDate ||
+                !returnDate.text().isDate ||
+                startDate.text().asDate.compareTo(returnDate.text().asDate) > 0
             }
         }
 
-        Stage(stage, title = "Flight Booker") {
+        Stage(stage, title="Flight Booker") {
             scene = Scene {
                 root = VBox(spacing=10.0, padding=Insets(10.0)) {
                     + flightType
