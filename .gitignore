@@ -1,5 +1,7 @@
 # Project specific
 kotlinfx.iml
+kotlinfx-core/kotlinfx-core.iml
+kotlinfx-demos/kotlinfx-demos.iml
 
 # OS / App generated files
 build/
