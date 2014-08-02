@@ -2,13 +2,15 @@
 package kotlinfx.builders
 
 import javafx.geometry.Orientation
+import javafx.scene.Node
+import javafx.collections.ObservableList
 
 trait K : javafx.scene.layout.Pane {
-    fun javafx.scene.Node.plus(): javafx.scene.Node {
+    public fun javafx.scene.Node.plus(): javafx.scene.Node {
         getChildren()!!.add(this)
         return this
     }
-    fun javafx.scene.Node.plus(node: javafx.scene.Node): javafx.scene.Node {
+    public fun javafx.scene.Node.plus(node: javafx.scene.Node): javafx.scene.Node {
         getChildren()!!.add(node)
         return node
     }
@@ -31,7 +33,7 @@ public fun AnchorPane(
     x.setPadding(padding)
     return x
 }
-class AnchorPaneK(vararg children: javafx.scene.Node?) : javafx.scene.layout.AnchorPane(*children), K
+public class AnchorPaneK(vararg children: javafx.scene.Node?) : javafx.scene.layout.AnchorPane(*children), K
 
 // For immutable javafx.scene.layout.Background a builder does not make sense.
 // For immutable javafx.scene.layout.BackgroundFill a builder does not make sense.
@@ -52,7 +54,7 @@ public fun BorderPane(
     x.f()
     return x
 }
-class BorderPaneK : javafx.scene.layout.BorderPane(), K
+public class BorderPaneK : javafx.scene.layout.BorderPane(), K
 
 // For immutable javafx.scene.layout.BorderStroke a builder does not make sense.
 // For immutable javafx.scene.layout.BorderStrokeStyle a builder does not make sense.
@@ -69,7 +71,7 @@ public fun FlowPane(
     x.f()
     return x
 }
-class FlowPaneK1 : javafx.scene.layout.FlowPane(), K
+public class FlowPaneK1 : javafx.scene.layout.FlowPane(), K
 
 public fun FlowPane(
     hgap: Double,
@@ -80,7 +82,7 @@ public fun FlowPane(
     x.f()
     return x
 }
-class FlowPaneK2(hgap: Double, vgap: Double) : javafx.scene.layout.FlowPane(hgap, vgap), K
+public class FlowPaneK2(hgap: Double, vgap: Double) : javafx.scene.layout.FlowPane(hgap, vgap), K
 
 public fun FlowPane(
     hgap: Double,
@@ -90,7 +92,7 @@ public fun FlowPane(
     val x = FlowPaneK3(hgap, vgap, *children)
     return x
 }
-class FlowPaneK3(hgap: Double, vgap: Double, vararg children: javafx.scene.Node?) : javafx.scene.layout.FlowPane(hgap, vgap, *children), K
+public class FlowPaneK3(hgap: Double, vgap: Double, vararg children: javafx.scene.Node?) : javafx.scene.layout.FlowPane(hgap, vgap, *children), K
 
 public fun FlowPane(
     vararg children: javafx.scene.Node?): javafx.scene.layout.FlowPane
@@ -98,7 +100,7 @@ public fun FlowPane(
     val x = FlowPaneK4(*children)
     return x
 }
-class FlowPaneK4(vararg children: javafx.scene.Node?) : javafx.scene.layout.FlowPane(*children), K
+public class FlowPaneK4(vararg children: javafx.scene.Node?) : javafx.scene.layout.FlowPane(*children), K
 
 public fun FlowPane(
     orientation: javafx.geometry.Orientation,
@@ -108,7 +110,7 @@ public fun FlowPane(
     x.f()
     return x
 }
-class FlowPaneK5(orientation: javafx.geometry.Orientation) : javafx.scene.layout.FlowPane(orientation), K
+public class FlowPaneK5(orientation: javafx.geometry.Orientation) : javafx.scene.layout.FlowPane(orientation), K
 
 public fun FlowPane(
     orientation: javafx.geometry.Orientation,
@@ -120,7 +122,7 @@ public fun FlowPane(
     x.f()
     return x
 }
-class FlowPaneK6(orientation: javafx.geometry.Orientation, hgap: Double, vgap: Double) : javafx.scene.layout.FlowPane(orientation, hgap, vgap), K
+public class FlowPaneK6(orientation: javafx.geometry.Orientation, hgap: Double, vgap: Double) : javafx.scene.layout.FlowPane(orientation, hgap, vgap), K
 
 public fun FlowPane(
     orientation: javafx.geometry.Orientation,
@@ -131,7 +133,7 @@ public fun FlowPane(
     val x = FlowPaneK7(orientation, hgap, vgap, *children)
     return x
 }
-class FlowPaneK7(orientation: javafx.geometry.Orientation, hgap: Double, vgap: Double, vararg children: javafx.scene.Node?) : javafx.scene.layout.FlowPane(orientation, hgap, vgap, *children), K
+public class FlowPaneK7(orientation: javafx.geometry.Orientation, hgap: Double, vgap: Double, vararg children: javafx.scene.Node?) : javafx.scene.layout.FlowPane(orientation, hgap, vgap, *children), K
 
 public fun FlowPane(
     orientation: javafx.geometry.Orientation,
@@ -140,7 +142,7 @@ public fun FlowPane(
     val x = FlowPaneK8(orientation, *children)
     return x
 }
-class FlowPaneK8(orientation: javafx.geometry.Orientation, vararg children: javafx.scene.Node?) : javafx.scene.layout.FlowPane(orientation, *children), K
+public class FlowPaneK8(orientation: javafx.geometry.Orientation, vararg children: javafx.scene.Node?) : javafx.scene.layout.FlowPane(orientation, *children), K
 
 public fun GridPane(
     padding: javafx.geometry.Insets = Insets(0.0),
@@ -151,7 +153,7 @@ public fun GridPane(
     x.f()
     return x
 }
-class GridPaneK : javafx.scene.layout.GridPane(), K
+public class GridPaneK : javafx.scene.layout.GridPane(), K
 
 public fun HBox(
     spacing: Double = 0.0,
@@ -165,7 +167,7 @@ public fun HBox(
     x.f()
     return x
 }
-class HBoxK(vararg children: javafx.scene.Node?) : javafx.scene.layout.HBox(*children), K
+public class HBoxK(vararg children: javafx.scene.Node?) : javafx.scene.layout.HBox(*children), K
 
 public fun Pane(
     f: PaneK.() -> Unit = {}): javafx.scene.layout.Pane
@@ -174,7 +176,7 @@ public fun Pane(
     x.f()
     return x
 }
-class PaneK : javafx.scene.layout.Pane(), K
+public class PaneK : javafx.scene.layout.Pane(), K
 
 public fun Region(
     f: RegionK.() -> Unit = {}): javafx.scene.layout.Region
@@ -183,7 +185,12 @@ public fun Region(
     x.f()
     return x
 }
-class RegionK : javafx.scene.layout.Region(), K
+public class RegionK : javafx.scene.layout.Region(), K {
+    // Otherwise there is the error: "Cannot infer visibility for 'fun getChildren'. Please specifiy it explicitly"
+    override fun getChildren(): ObservableList<Node>? {
+        return super<K>.getChildren()
+    }
+}
 
 // For javafx.scene.layout.RowConstraints a builder is not really beneficial.
 
@@ -201,7 +208,7 @@ public fun StackPane(vararg children: javafx.scene.Node?): javafx.scene.layout.S
     val x = StackPaneK(*children)
     return x
 }
-class StackPaneK(vararg children: javafx.scene.Node?) : javafx.scene.layout.StackPane(*children), K
+public class StackPaneK(vararg children: javafx.scene.Node?) : javafx.scene.layout.StackPane(*children), K
 
 public fun VBox(
     spacing: Double = 0.0,
@@ -215,7 +222,7 @@ public fun VBox(
     x.f()
     return x
 }
-class VBoxK(vararg children: javafx.scene.Node?) : javafx.scene.layout.VBox(*children), K
+public class VBoxK(vararg children: javafx.scene.Node?) : javafx.scene.layout.VBox(*children), K
 
 public fun TilePane(
     f: TilePaneK1.() -> Unit = {}): javafx.scene.layout.TilePane
@@ -224,7 +231,7 @@ public fun TilePane(
     x.f()
     return x
 }
-class TilePaneK1 : javafx.scene.layout.TilePane(), K
+public class TilePaneK1 : javafx.scene.layout.TilePane(), K
 
 public fun TilePane(
     hgap: Double,
@@ -235,7 +242,7 @@ public fun TilePane(
     x.f()
     return x
 }
-class TilePaneK2(hgap: Double, vgap: Double) : javafx.scene.layout.TilePane(hgap, vgap), K
+public class TilePaneK2(hgap: Double, vgap: Double) : javafx.scene.layout.TilePane(hgap, vgap), K
 
 public fun TilePane(
     hgap: Double,
@@ -245,7 +252,7 @@ public fun TilePane(
     val x = TilePaneK3(hgap, vgap, *children)
     return x
 }
-class TilePaneK3(hgap: Double, vgap: Double, vararg children: javafx.scene.Node?) : javafx.scene.layout.TilePane(hgap, vgap, *children), K
+public class TilePaneK3(hgap: Double, vgap: Double, vararg children: javafx.scene.Node?) : javafx.scene.layout.TilePane(hgap, vgap, *children), K
 
 public fun TilePane(
     vararg children: javafx.scene.Node?): javafx.scene.layout.TilePane
@@ -253,7 +260,7 @@ public fun TilePane(
     val x = TilePaneK4(*children)
     return x
 }
-class TilePaneK4(vararg children: javafx.scene.Node?) : javafx.scene.layout.TilePane(*children), K
+public class TilePaneK4(vararg children: javafx.scene.Node?) : javafx.scene.layout.TilePane(*children), K
 
 public fun TilePane(
     orientation: javafx.geometry.Orientation,
@@ -263,7 +270,7 @@ public fun TilePane(
     x.f()
     return x
 }
-class TilePaneK5(orientation: javafx.geometry.Orientation) : javafx.scene.layout.TilePane(orientation), K
+public class TilePaneK5(orientation: javafx.geometry.Orientation) : javafx.scene.layout.TilePane(orientation), K
 
 public fun TilePane(
     orientation: javafx.geometry.Orientation,
@@ -275,7 +282,7 @@ public fun TilePane(
     x.f()
     return x
 }
-class TilePaneK6(orientation: javafx.geometry.Orientation, hgap: Double, vgap: Double) : javafx.scene.layout.TilePane(orientation, hgap, vgap), K
+public class TilePaneK6(orientation: javafx.geometry.Orientation, hgap: Double, vgap: Double) : javafx.scene.layout.TilePane(orientation, hgap, vgap), K
 
 public fun TilePane(
     orientation: javafx.geometry.Orientation,
@@ -286,7 +293,7 @@ public fun TilePane(
     val x = TilePaneK7(orientation, hgap, vgap, *children)
     return x
 }
-class TilePaneK7(orientation: javafx.geometry.Orientation, hgap: Double, vgap: Double, vararg children: javafx.scene.Node?) : javafx.scene.layout.TilePane(orientation, hgap, vgap, *children), K
+public class TilePaneK7(orientation: javafx.geometry.Orientation, hgap: Double, vgap: Double, vararg children: javafx.scene.Node?) : javafx.scene.layout.TilePane(orientation, hgap, vgap, *children), K
 
 public fun TilePane(
     orientation: javafx.geometry.Orientation,
@@ -295,4 +302,4 @@ public fun TilePane(
     val x = TilePaneK8(orientation, *children)
     return x
 }
-class TilePaneK8(orientation: javafx.geometry.Orientation, vararg children: javafx.scene.Node?) : javafx.scene.layout.TilePane(orientation, *children), K
+public class TilePaneK8(orientation: javafx.geometry.Orientation, vararg children: javafx.scene.Node?) : javafx.scene.layout.TilePane(orientation, *children), K
