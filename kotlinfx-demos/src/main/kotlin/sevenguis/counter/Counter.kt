@@ -14,9 +14,9 @@ class Counter : Application() {
         val count = TextField("0") {
             editable = false; prefWidth = 50.0 }
         val countUp = Button("Count") {
-            setOnAction { count.setText("${1+Integer.parseInt(count.getText().toString())}") }}
+            setOnAction { count.setText("${1+Integer.parseInt(count.text.toString())}") }}
             //TODO Why does the following not work?
-            //onAction = { count.setText("${1+Integer.parseInt(count.getText().toString())}") }}
+            //onAction = { count.setText("${1+Integer.parseInt(count.text.toString())}") }}
 
         Stage(stage, title = "Counter") {
             scene = Scene {

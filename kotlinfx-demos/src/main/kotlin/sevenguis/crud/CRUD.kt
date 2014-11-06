@@ -53,22 +53,12 @@ class CRUD : Application() {
                 }
             }
         })
-        // TODO: Why not anonymous function?
-        val dbView = db.filtered(object : Predicate<String> {
-            override fun test(t: String?): Boolean = true
-        })!!
+        val dbView = db.filtered { true }
         entries.setItems(dbView)
 
         val fullname = surname.textp + ", " + name.textp
         val selectedIndex = entries.selectionModel.selectedIndexp
-        // TODO: Why not anonymous function?
-        prefix.textp.addListener(object : ChangeListener<String> {
-            override fun changed(v: ObservableValue<out String>?, o: String?, n: String?) {
-                dbView.setPredicate(object : Predicate<String> {
-                    override fun test(t: String?): Boolean = t!!.startsWith(n!!)
-                })
-            }
-        })
+        prefix.textp.addListener { (v, o, n) -> dbView.setPredicate { t -> t.startsWith(n) } }
         create.setOnAction { db.add(fullname.v) }
         delete.setOnAction { db.remove(dbView.getSourceIndex(selectedIndex.v)) }
         update.setOnAction { db.set(dbView.getSourceIndex(selectedIndex.v), fullname.v) }

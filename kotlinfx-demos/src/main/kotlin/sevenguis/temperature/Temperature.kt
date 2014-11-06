@@ -17,10 +17,10 @@ class TemperatureConverter : Application() {
         val fahrenheit = TextField()
 
         celsius.textp.bindBidirectional(fahrenheit.textp, object : StringConverter<String>() {
-            override fun fromString(c: String?): String? =
-                if (isNumeric(c!!)) cToF(c) else fahrenheit.text
-            override fun toString(f: String?): String? =
-                if (isNumeric(f!!)) fToC(f) else celsius.text
+            override fun fromString(c: String): String? =
+                if (isNumeric(c)) cToF(c) else fahrenheit.text
+            override fun toString(f: String): String? =
+                if (isNumeric(f)) fToC(f) else celsius.text
         })
 
         Stage(stage, title = "Temperature Converter") {
