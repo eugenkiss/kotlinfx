@@ -6,7 +6,6 @@ import kotlinfx.bindings.*
 import kotlinfx.abbreviations.*
 import javafx.application.Application
 import javafx.stage.Stage
-import javafx.scene.control.ComboBox
 import javafx.collections.FXCollections
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -22,7 +21,7 @@ fun main(args: Array<String>) {
 
 class FlightBooker : Application() {
     override fun start(stage: Stage?) {
-        val flightType = ComboBox<String>(FXCollections.observableArrayList("one-way flight", "return flight"))
+        val flightType = ComboBox(FXCollections.observableArrayList("one-way flight", "return flight"))
         flightType.value = "one-way flight"
         val startDate = TextField(LocalDate.now().asString())
         val returnDate = TextField(LocalDate.now().asString())

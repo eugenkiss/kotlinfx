@@ -179,17 +179,11 @@ public fun Pane(
 public class PaneK : javafx.scene.layout.Pane(), K
 
 public fun Region(
-    f: RegionK.() -> Unit = {}): javafx.scene.layout.Region
+    f: javafx.scene.layout.Region.() -> Unit = {}): javafx.scene.layout.Region
 {
-    val x = RegionK()
+    val x = Region()
     x.f()
     return x
-}
-public class RegionK : javafx.scene.layout.Region(), K {
-    // Otherwise there is the error: "Cannot infer visibility for 'fun getChildren'. Please specifiy it explicitly"
-    override fun getChildren(): ObservableList<Node>? {
-        return super<K>.getChildren()
-    }
 }
 
 // For javafx.scene.layout.RowConstraints a builder is not really beneficial.
