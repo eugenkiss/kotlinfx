@@ -65,7 +65,7 @@ public class K<T>(private val calc: () -> T) {
 }
 
 
-private fun template<T>(name: String, f: (() -> T)?, thiz: Any, property: ObservableValue<T>): T {
+fun template<T>(name: String, f: (() -> T)?, thiz: Any, property: ObservableValue<T>): T {
     if (f == null) {
         if (enclosing != null &&
         (isConstruction || !listenerMap.containsKey(enclosing) || !listenerMap.get(enclosing)!!.contains(thiz))) {

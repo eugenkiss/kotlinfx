@@ -36,20 +36,13 @@ class CRUD : Application() {
         val db = FXCollections.observableArrayList(externDb)!!
         // TODO: Why not anonymous function?
         db.addListener(object : ListChangeListener<String> {
-            override fun onChanged(c: ListChangeListener.Change<out String>?) {
-                c!!
+            override fun onChanged(c: ListChangeListener.Change<out String>) {
                 while (c.next()) {
-                    if (c.wasReplaced()) externDb.set(c.getFrom(), c.getAddedSubList()!!.get(0))
+                    if (c.wasReplaced()) externDb.set(c.from, c.addedSubList.get(0))
                     else {
-                        if (c.wasAdded()) externDb.add(c.getAddedSubList()!!.get(0))
-                        if (c.wasRemoved()) externDb.remove(c.getFrom())
+                        if (c.wasAdded()) externDb.add(c.addedSubList.get(0))
+                        if (c.wasRemoved()) externDb.remove(c.from)
                     }
-                    // TODO: Type inference fails
-//                    if (c.wasReplaced()) externDb.set(c.from, c.addedSubList.get(0))
-//                    else {
-//                        if (c.wasAdded()) externDb.add(c.addedSubList.get(0))
-//                        if (c.wasRemoved()) externDb.remove(c.from)
-//                    }
                 }
             }
         })
