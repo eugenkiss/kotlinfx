@@ -49,7 +49,7 @@ public class V<T>(private var value: T) {
 }
 
 public class K<T>(private val calc: () -> T) {
-    {
+    init {
         val e = Pair(this, "K")
         calcMap.put(e, {})
         isConstruction = true; enclosing = e; calc(); enclosing = null; isConstruction = false
@@ -74,7 +74,7 @@ private fun template<T>(name: String, f: (() -> T)?, thiz: Any, property: Observ
         (isConstruction || !listenerMap.containsKey(enclosing) || !listenerMap.get(enclosing)!!.contains(thiz))) {
             val e = enclosing!!
             listenerMap.getOrPut(e) { hashSetOf() } .add(thiz)
-            property.addListener { (v: Any?, o: Any?, n: Any?) -> calcMap.get(e)!!() }
+            property.addListener { v: Any?, o: Any?, n: Any? -> calcMap.get(e)!!() }
         }
     }
     else {
