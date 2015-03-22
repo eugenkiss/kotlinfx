@@ -16,9 +16,9 @@ public fun Shear(
     y: Double,
     f: javafx.scene.transform.Shear.() -> Unit = {}): javafx.scene.transform.Shear
 {
-    val x = javafx.scene.transform.Shear(x, y)
-    x.f()
-    return x
+    val z = javafx.scene.transform.Shear(x, y)
+    z.f()
+    return z
 }
 
 public fun Shear(
@@ -28,9 +28,9 @@ public fun Shear(
     pivotY: Double,
     f: javafx.scene.transform.Shear.() -> Unit = {}): javafx.scene.transform.Shear
 {
-    val x = javafx.scene.transform.Shear(x, y, pivotX, pivotY)
-    x.f()
-    return x
+    val z = javafx.scene.transform.Shear(x, y, pivotX, pivotY)
+    z.f()
+    return z
 }
 
 // For abstract javafx.scene.transform.Transform a builder does not make sense.
@@ -49,9 +49,9 @@ public fun Translate(
     y: Double,
     f: javafx.scene.transform.Translate.() -> Unit = {}): javafx.scene.transform.Translate
 {
-    val x = javafx.scene.transform.Translate(x, y)
-    x.f()
-    return x
+    val z = javafx.scene.transform.Translate(x, y)
+    z.f()
+    return z
 }
 
 public fun Translate(
@@ -60,7 +60,7 @@ public fun Translate(
     z: Double,
     f: javafx.scene.transform.Translate.() -> Unit = {}): javafx.scene.transform.Translate
 {
-    val x = javafx.scene.transform.Translate(x, y, z)
-    x.f()
-    return x
+    val w = javafx.scene.transform.Translate(x, y, z)
+    w.f()
+    return w
 }

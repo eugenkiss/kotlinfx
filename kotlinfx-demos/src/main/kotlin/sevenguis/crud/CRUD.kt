@@ -38,9 +38,9 @@ class CRUD : Application() {
         db.addListener(object : ListChangeListener<String> {
             override fun onChanged(c: ListChangeListener.Change<out String>) {
                 while (c.next()) {
-                    if (c.wasReplaced()) externDb.set(c.from, c.addedSubList.get(0))
+                    if (c.wasReplaced()) externDb.set(c.from, c.getAddedSubList().get(0))
                     else {
-                        if (c.wasAdded()) externDb.add(c.addedSubList.get(0))
+                        if (c.wasAdded()) externDb.add(c.getAddedSubList().get(0))
                         if (c.wasRemoved()) externDb.remove(c.from)
                     }
                 }
@@ -51,7 +51,7 @@ class CRUD : Application() {
 
         val fullname = surname.textp + ", " + name.textp
         val selectedIndex = entries.selectionModel.selectedIndexp
-        prefix.textp.addListener { (v, o, n) -> dbView.setPredicate { t -> t.startsWith(n) } }
+        prefix.textp.addListener { v, o, n -> dbView.setPredicate { t -> t.startsWith(n) } }
         create.setOnAction { db.add(fullname.v) }
         delete.setOnAction { db.remove(dbView.getSourceIndex(selectedIndex.v)) }
         update.setOnAction { db.set(dbView.getSourceIndex(selectedIndex.v), fullname.v) }

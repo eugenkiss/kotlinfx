@@ -26,9 +26,9 @@ public fun Text(
     text: String,
     f: javafx.scene.text.Text.() -> Unit = {}): javafx.scene.text.Text
 {
-    val x = javafx.scene.text.Text(x, y, text)
-    x.f()
-    return x
+    val z = javafx.scene.text.Text(x, y, text)
+    z.f()
+    return z
 }
 
 public fun TextFlow(

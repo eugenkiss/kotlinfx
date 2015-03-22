@@ -34,7 +34,7 @@ class FlightBooker : Application() {
             if (startDate.text.isDate) "" else "-fx-background-color: lightcoral"
         }, startDate.textp)
         // For comparison, callback alternative
-        returnDate.textp.addListener{(v, o, n) ->
+        returnDate.textp.addListener{ v, o, n ->
             returnDate.setStyle(if (n.isDate) "" else "-fx-background-color: lightcoral")}
         // TODO: How to use closure instead of Callable?
         book.disablep bind Bindings.createBooleanBinding(object : Callable<Boolean> { override fun call(): Boolean? =

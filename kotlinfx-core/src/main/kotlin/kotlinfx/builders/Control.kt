@@ -39,7 +39,7 @@ public fun CheckBox(
 }
 
 public fun CheckBoxTreeItem<T>(
-    value: T? = null,
+    value: T = null,
     graphic: javafx.scene.Node? = null,
     selected: Boolean = false,
     independent: Boolean = false,
@@ -515,7 +515,7 @@ public fun TreeCell<T>(
 }
 
 public fun TreeItem<T>(
-    value: T? = null,
+    value: T = null,
     graphic: javafx.scene.Node? = null,
     f: javafx.scene.control.TreeItem<T>.() -> Unit = {}): javafx.scene.control.TreeItem<T>
 {
