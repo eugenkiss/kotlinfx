@@ -1,3 +1,5 @@
+**NOTE: This project is unmaintained. Please check out [TornadoFX](https://github.com/edvin/tornadofx) as an up-to-date and much more comprehensive alternative.**
+
 KotlinFX
 ========
 
