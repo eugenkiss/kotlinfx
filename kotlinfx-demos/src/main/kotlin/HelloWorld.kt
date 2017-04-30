@@ -14,7 +14,7 @@ class HelloWorld : Application() {
     override fun start(stage: Stage?) {
         Stage(stage, title = "Hello World!") {
             scene = Scene(width = 300.0, height = 250.0) {
-                root = StackPane {
+                root = Pane {
                     + Button("Say 'Hello World'") {
                         setOnAction { println("Hello World!") }
                     }
